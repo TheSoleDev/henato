@@ -17,61 +17,87 @@
   </head>
   <body>
 
+    <header>
 
-    <header class="fixed-top">
-      <div class="container-fluid header-bar">
+      <div class="container-fluid header-bar fixed-top">
         <div class="container">
           <div class="row flex-container">
-
-            <div class="col-10 pl- pr-0 text-left">
-                <form id="search_option" action="http://henato-v1.local/shop" method="get">
+            <div class="col-9 pr-0 text-left">
+                <form id="search_option" action="http://henato.eglobalmd.com/search" method="get">
                   <div class="input-group header-search-box-group">
-                      <input type="text" id="srch_term" name="srch_term" class="form-control search-box-input" placeholder="Search for...">
+                      <input type="text" id="keyword" name="keyword" class="form-control search-box-input" placeholder="Search for...">
                       <span class="input-group-btn">
                         <button id="btn-search" class="btn btn-default  search-box-button" type="submit"><svg class="henato-svg-icon icon-search-2" height="19" viewBox="0 0 19 19" width="19"><g fill-rule="evenodd" stroke="none" stroke-width="1"><g transform="translate(-1016 -32)"><g><g transform="translate(405 21)"><g transform="translate(611 11)"><path d="m8 16c4.418278 0 8-3.581722 8-8s-3.581722-8-8-8-8 3.581722-8 8 3.581722 8 8 8zm0-2c-3.3137085 0-6-2.6862915-6-6s2.6862915-6 6-6 6 2.6862915 6 6-2.6862915 6-6 6z" fill="white"></path><path d="m12.2972351 13.7114222 4.9799555 4.919354c.3929077.3881263 1.0260608.3842503 1.4141871-.0086574.3881263-.3929076.3842503-1.0260607-.0086574-1.414187l-4.9799554-4.919354c-.3929077-.3881263-1.0260608-.3842503-1.4141871.0086573-.3881263.3929077-.3842503 1.0260608.0086573 1.4141871z" fill="white"></path></g></g></g></g></g></svg></button>
                       </span>
-                  </div><!-- /input-group -->
+                  </div>
                 </form>
             </div>  
-            <div class="col-2 pl-0 text-center">
-                <svg class="henato-svg-icon icon-shopping-cart-2 navbar__link-icon" viewBox="0 0 26.6 25.6"><polyline fill="none" points="2 1.7 5.5 1.7 9.6 18.3 21.2 18.3 24.6 6.1 7 6.1" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2.5"></polyline><circle cx="10.7" cy="23" r="2.2" stroke="none"></circle><circle cx="19.7" cy="23" r="2.2" stroke="none"></circle></svg>
+            <div class="col-3 pr-0 pl-0 text-center">
+                <a href="http://henato.eglobalmd.com/cart">
+                    <svg class="henato-svg-icon icon-shopping-cart-2 navbar__link-icon" viewBox="0 0 26.6 25.6"><polyline fill="none" points="2 1.7 5.5 1.7 9.6 18.3 21.2 18.3 24.6 6.1 7 6.1" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2.5"></polyline><circle cx="10.7" cy="23" r="2.2" stroke="none"></circle><circle cx="19.7" cy="23" r="2.2" stroke="none"></circle></svg>
+                    <div class="header-cart-counter" style="display: none;"></div>
+                </a>
             </div>                  
           </div>
         </div>
       </div>
     </header>
+    <div class="main-container">
+         
 
 
-    <section class="mt-100">
-      <div class="container">
-          <div class="row">
-            <div class="col-sm-8">
 
-              <div id="homeCarousel" class="carousel slide" data-ride="carousel">
-                <ol class="carousel-indicators">
-                  <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
-                  <li data-target="#homeCarousel" data-slide-to="1"></li>
-                  <li data-target="#homeCarousel" data-slide-to="2"></li>
-                </ol>
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img class="d-block w-100" src="http://henato-v1.local/public/uploads/01510757921w-1242-h-373-slide-1.jpg"  class="img-fluid" alt="First slide">
+        <section class="mt-100">
+        <div class="container">
+            <div class="row">
+              <div class=" col-sm-8 ">
+
+                <div id="homeCarousel" class="carousel slide" data-ride="carousel">
+                  <ol class="carousel-indicators">
+                                        <li data-target="#homeCarousel" data-slide-to="0"  class="active" ></li>
+                                        <li data-target="#homeCarousel" data-slide-to="1" ></li>
+                                        <li data-target="#homeCarousel" data-slide-to="2" ></li>
+                                        
+                  </ol>
+                  <div class="carousel-inner">
+                                        
+                                          <div class="carousel-item  active ">
+                        <img class="d-block w-100" src="http://henato.eglobalmd.com/storage/carousel-banners/January2018/B4xHCmUJQW3J0Gu2cLPG.jpg"  class="img-fluid">
+                      </div>
+                                          
+                                          <div class="carousel-item ">
+                        <img class="d-block w-100" src="http://henato.eglobalmd.com/storage/carousel-banners/January2018/sxvij8kpDqht4GSwQ9zj.jpg"  class="img-fluid">
+                      </div>
+                                          
+                                          <div class="carousel-item ">
+                        <img class="d-block w-100" src="http://henato.eglobalmd.com/storage/carousel-banners/January2018/N14n9DHSnnqKAeToRsfw.jpg"  class="img-fluid">
+                      </div>
+                                          
+                    
+
                   </div>
-                  <div class="carousel-item">
-                    <img class="d-block w-100" src="http://henato.eglobalmd.net/public/uploads/01510760217w-1242-h-373-slide-1.jpg" class="img-fluid" alt="Second slide">
-                  </div>
-                  <div class="carousel-item">
-                    <img class="d-block w-100" src="http://henato.eglobalmd.net/public/uploads/01510879624w-1242-h-373-banner.jpg" class="img-fluid" alt="Third slide">
-                  </div>
+
                 </div>
-
               </div>
-            </div>
-          
-          </div> 
-      </div>
-    </section>
-    
+               
+              <div class="col-sm-4 d-none d-md-block">
+                
+                                  <div class="mb-10">
+                    <img class="d-block w-100" src="http://henato.eglobalmd.com/storage/carousel-banners/January2018/4iwTyirVhccnPetY71F6.jpg"  class="img-fluid"">
+                  </div>
+                  
+                                  <div class="mb-10">
+                    <img class="d-block w-100" src="http://henato.eglobalmd.com/storage/carousel-banners/January2018/oT3E5vGRBVoDDn7YLwuD.jpg"  class="img-fluid"">
+                  </div>
+                  
+                                
+
+              </div>        
+                  
+            </div> 
+        </div>
+      </section>
+      
 
 
     <section id="categories" class="mt-30"> 
@@ -91,267 +117,220 @@
                       <div class="category-header-section__content">
                           <div class="category-image-carousel">
                               <div class="category-image-carousel__item-list-wrapper">
-
-                     
+                                                     
                                 <ul class="category-image-carousel__item-list" style="width: 100%; transform: translate(0px, 0px);">
-                                                                                                         
+                                
+                                                                                                                                                                                   
                                         <li class="category-image-carousel__item" style="padding: 0px; width: 11.111111111111%;">
                                             <div class="home-category-list__group">
-                                                                                          <a class="home-category-list__category-grid" href="#accessories-3-2">
-                                                    <div class="home-category-list__category-grid-content">
-                                                        <div class="lazy-image__container home-category-list__category-grid-thumbnail">
-                                                            <div class="lazy-image__image" style="background-image: url(&quot;http://henato-v1.local/public/uploads/1509542655-h-150-Accessories.png&quot;);"></div>
-                                                        </div>
-                                                        <div class="home-category-list__category-grid-name">Accessories</div>
-                                                    </div>
-                                                </a>
-                                                                                                                                    <a class="home-category-list__category-grid" href="#mens-shoes">
-                                                    <div class="home-category-list__category-grid-content">
-                                                        <div class="lazy-image__container home-category-list__category-grid-thumbnail">
-                                                            <div class="lazy-image__image" style="background-image: url(&quot;http://henato-v1.local/public/uploads/1509543200-h-150-Men's Shoes.png&quot;);"></div>
-                                                        </div>
-                                                        <div class="home-category-list__category-grid-name">Men's Shoes</div>
-                                                    </div>
-                                                </a>
-                                                                                
+                                                               
+                                                                                           <a class="home-category-list__category-grid" href="http://henato.eglobalmd.com/category/accessories">
+                                                  <div class="home-category-list__category-grid-content">
+                                                      <div class="lazy-image__container home-category-list__category-grid-thumbnail">
+                                                          <div class="lazy-image__image" style="background-image: url('http://henato.eglobalmd.com/storage/categories/January2018/x6PBIpxSixRzkAuWayod.png');"></div>
+                                                      </div>
+                                                      <div class="home-category-list__category-grid-name">Accessories</div>
+                                                  </div>
+                                              </a>
+                                                                                                                                          <a class="home-category-list__category-grid" href="http://henato.eglobalmd.com/category/accessories">
+                                                  <div class="home-category-list__category-grid-content">
+                                                      <div class="lazy-image__container home-category-list__category-grid-thumbnail">
+                                                          <div class="lazy-image__image" style="background-image: url('http://henato.eglobalmd.com/storage/categories/January2018/mqjNiBQMRomKfshWSa7g.png');"></div>
+                                                      </div>
+                                                      <div class="home-category-list__category-grid-name">Men's Shoes</div>
+                                                  </div>
+                                              </a>
+                                              
                                             </div>
                                         </li>
-
-
-
-
-
-                                     
-                                               
+                                                                                                          
                                         <li class="category-image-carousel__item" style="padding: 0px; width: 11.111111111111%;">
                                             <div class="home-category-list__group">
-                                                                                          <a class="home-category-list__category-grid" href="#bags">
-                                                    <div class="home-category-list__category-grid-content">
-                                                        <div class="lazy-image__container home-category-list__category-grid-thumbnail">
-                                                            <div class="lazy-image__image" style="background-image: url(&quot;http://henato-v1.local/public/uploads/1509542681-h-150-Bags.png&quot;);"></div>
-                                                        </div>
-                                                        <div class="home-category-list__category-grid-name">Bags</div>
-                                                    </div>
-                                                </a>
-                                                                                                                                    <a class="home-category-list__category-grid" href="#mobile-and-gadgets">
-                                                    <div class="home-category-list__category-grid-content">
-                                                        <div class="lazy-image__container home-category-list__category-grid-thumbnail">
-                                                            <div class="lazy-image__image" style="background-image: url(&quot;http://henato-v1.local/public/uploads/1509543228-h-150-Mobile &amp; Gadgets.png&quot;);"></div>
-                                                        </div>
-                                                        <div class="home-category-list__category-grid-name">Mobile &amp; Gadgets</div>
-                                                    </div>
-                                                </a>
-                                                                                
+                                                               
+                                                                                           <a class="home-category-list__category-grid" href="http://henato.eglobalmd.com/category/bags">
+                                                  <div class="home-category-list__category-grid-content">
+                                                      <div class="lazy-image__container home-category-list__category-grid-thumbnail">
+                                                          <div class="lazy-image__image" style="background-image: url('http://henato.eglobalmd.com/storage/categories/January2018/eYwjd4377fjgeOSB82bV.png');"></div>
+                                                      </div>
+                                                      <div class="home-category-list__category-grid-name">Bags</div>
+                                                  </div>
+                                              </a>
+                                                                                                                                          <a class="home-category-list__category-grid" href="http://henato.eglobalmd.com/category/bags">
+                                                  <div class="home-category-list__category-grid-content">
+                                                      <div class="lazy-image__container home-category-list__category-grid-thumbnail">
+                                                          <div class="lazy-image__image" style="background-image: url('http://henato.eglobalmd.com/storage/categories/January2018/O8QLL3OXcmccfcTaoviH.png');"></div>
+                                                      </div>
+                                                      <div class="home-category-list__category-grid-name">Mobile & Gadgets</div>
+                                                  </div>
+                                              </a>
+                                              
                                             </div>
                                         </li>
-
-
-
-
-
-                                     
-                                               
+                                                                                                          
                                         <li class="category-image-carousel__item" style="padding: 0px; width: 11.111111111111%;">
                                             <div class="home-category-list__group">
-                                                                                          <a class="home-category-list__category-grid" href="#computers-and-peripherals">
-                                                    <div class="home-category-list__category-grid-content">
-                                                        <div class="lazy-image__container home-category-list__category-grid-thumbnail">
-                                                            <div class="lazy-image__image" style="background-image: url(&quot;http://henato-v1.local/public/uploads/1509542715-h-150-Computers &amp; Peripherals.png&quot;);"></div>
-                                                        </div>
-                                                        <div class="home-category-list__category-grid-name">Computers &amp; Peripherals</div>
-                                                    </div>
-                                                </a>
-                                                                                                                                    <a class="home-category-list__category-grid" href="#mens-wear">
-                                                    <div class="home-category-list__category-grid-content">
-                                                        <div class="lazy-image__container home-category-list__category-grid-thumbnail">
-                                                            <div class="lazy-image__image" style="background-image: url(&quot;http://henato-v1.local/public/uploads/1509543378-h-150-Men's Wear.png&quot;);"></div>
-                                                        </div>
-                                                        <div class="home-category-list__category-grid-name">Men's Wear</div>
-                                                    </div>
-                                                </a>
-                                                                                
+                                                               
+                                                                                           <a class="home-category-list__category-grid" href="http://henato.eglobalmd.com/category/computers-and-peripherals">
+                                                  <div class="home-category-list__category-grid-content">
+                                                      <div class="lazy-image__container home-category-list__category-grid-thumbnail">
+                                                          <div class="lazy-image__image" style="background-image: url('http://henato.eglobalmd.com/storage/categories/January2018/eKxswY2eRf3rmZBTLaPI.png');"></div>
+                                                      </div>
+                                                      <div class="home-category-list__category-grid-name">Computers & Peripherals</div>
+                                                  </div>
+                                              </a>
+                                                                                                                                          <a class="home-category-list__category-grid" href="http://henato.eglobalmd.com/category/computers-and-peripherals">
+                                                  <div class="home-category-list__category-grid-content">
+                                                      <div class="lazy-image__container home-category-list__category-grid-thumbnail">
+                                                          <div class="lazy-image__image" style="background-image: url('http://henato.eglobalmd.com/storage/categories/January2018/MLALN1pfOleIqjBjEYja.png');"></div>
+                                                      </div>
+                                                      <div class="home-category-list__category-grid-name">Men's Wear</div>
+                                                  </div>
+                                              </a>
+                                              
                                             </div>
                                         </li>
-
-
-
-
-
-                                     
-                                               
+                                                                                                          
                                         <li class="category-image-carousel__item" style="padding: 0px; width: 11.111111111111%;">
                                             <div class="home-category-list__group">
-                                                                                          <a class="home-category-list__category-grid" href="#design-and-crafts">
-                                                    <div class="home-category-list__category-grid-content">
-                                                        <div class="lazy-image__container home-category-list__category-grid-thumbnail">
-                                                            <div class="lazy-image__image" style="background-image: url(&quot;http://henato-v1.local/public/uploads/1509542736-h-150-Design &amp; Crafts.png&quot;);"></div>
-                                                        </div>
-                                                        <div class="home-category-list__category-grid-name">Design &amp; Crafts</div>
-                                                    </div>
-                                                </a>
-                                                                                                                                    <a class="home-category-list__category-grid" href="#pet-accessories">
-                                                    <div class="home-category-list__category-grid-content">
-                                                        <div class="lazy-image__container home-category-list__category-grid-thumbnail">
-                                                            <div class="lazy-image__image" style="background-image: url(&quot;http://henato-v1.local/public/uploads/1509543471-h-150-Pet Accessories.png&quot;);"></div>
-                                                        </div>
-                                                        <div class="home-category-list__category-grid-name">Pet Accessories</div>
-                                                    </div>
-                                                </a>
-                                                                                
+                                                               
+                                                                                           <a class="home-category-list__category-grid" href="http://henato.eglobalmd.com/category/design-and-crafts">
+                                                  <div class="home-category-list__category-grid-content">
+                                                      <div class="lazy-image__container home-category-list__category-grid-thumbnail">
+                                                          <div class="lazy-image__image" style="background-image: url('http://henato.eglobalmd.com/storage/categories/January2018/XL1nXE1CmfWTGL6Fgsiu.png');"></div>
+                                                      </div>
+                                                      <div class="home-category-list__category-grid-name">Design & Crafts</div>
+                                                  </div>
+                                              </a>
+                                                                                                                                          <a class="home-category-list__category-grid" href="http://henato.eglobalmd.com/category/design-and-crafts">
+                                                  <div class="home-category-list__category-grid-content">
+                                                      <div class="lazy-image__container home-category-list__category-grid-thumbnail">
+                                                          <div class="lazy-image__image" style="background-image: url('http://henato.eglobalmd.com/storage/categories/January2018/zBvPmz9JBrCKXKAAH5Rd.png');"></div>
+                                                      </div>
+                                                      <div class="home-category-list__category-grid-name">Pet Accessories</div>
+                                                  </div>
+                                              </a>
+                                              
                                             </div>
                                         </li>
-
-
-
-
-
-                                     
-                                               
+                                                                                                          
                                         <li class="category-image-carousel__item" style="padding: 0px; width: 11.111111111111%;">
                                             <div class="home-category-list__group">
-                                                                                          <a class="home-category-list__category-grid" href="#food-and-beverages">
-                                                    <div class="home-category-list__category-grid-content">
-                                                        <div class="lazy-image__container home-category-list__category-grid-thumbnail">
-                                                            <div class="lazy-image__image" style="background-image: url(&quot;http://henato-v1.local/public/uploads/1509543079-h-150-Food &amp; Beverages.png&quot;);"></div>
-                                                        </div>
-                                                        <div class="home-category-list__category-grid-name">Food &amp; Beverages</div>
-                                                    </div>
-                                                </a>
-                                                                                                                                    <a class="home-category-list__category-grid" href="#sports-and-outdoors">
-                                                    <div class="home-category-list__category-grid-content">
-                                                        <div class="lazy-image__container home-category-list__category-grid-thumbnail">
-                                                            <div class="lazy-image__image" style="background-image: url(&quot;http://henato-v1.local/public/uploads/1509543500-h-150-Sports &amp; Outdoors.png&quot;);"></div>
-                                                        </div>
-                                                        <div class="home-category-list__category-grid-name">Sports &amp; Outdoors</div>
-                                                    </div>
-                                                </a>
-                                                                                
+                                                               
+                                                                                           <a class="home-category-list__category-grid" href="http://henato.eglobalmd.com/category/food-and-beverages">
+                                                  <div class="home-category-list__category-grid-content">
+                                                      <div class="lazy-image__container home-category-list__category-grid-thumbnail">
+                                                          <div class="lazy-image__image" style="background-image: url('http://henato.eglobalmd.com/storage/categories/January2018/g6JrrJhcOdTYqTe6bCmI.png');"></div>
+                                                      </div>
+                                                      <div class="home-category-list__category-grid-name">Food & Beverages</div>
+                                                  </div>
+                                              </a>
+                                                                                                                                          <a class="home-category-list__category-grid" href="http://henato.eglobalmd.com/category/food-and-beverages">
+                                                  <div class="home-category-list__category-grid-content">
+                                                      <div class="lazy-image__container home-category-list__category-grid-thumbnail">
+                                                          <div class="lazy-image__image" style="background-image: url('http://henato.eglobalmd.com/storage/categories/January2018/IHfq8bek6nE2P4G0EXGO.png');"></div>
+                                                      </div>
+                                                      <div class="home-category-list__category-grid-name">Sports & Outdoors</div>
+                                                  </div>
+                                              </a>
+                                              
                                             </div>
                                         </li>
-
-
-
-
-
-                                     
-                                               
+                                                                                                          
                                         <li class="category-image-carousel__item" style="padding: 0px; width: 11.111111111111%;">
                                             <div class="home-category-list__group">
-                                                                                          <a class="home-category-list__category-grid" href="#games-and-hobbies">
-                                                    <div class="home-category-list__category-grid-content">
-                                                        <div class="lazy-image__container home-category-list__category-grid-thumbnail">
-                                                            <div class="lazy-image__image" style="background-image: url(&quot;http://henato-v1.local/public/uploads/1509543104-h-150-Games &amp; Hobbies.png&quot;);"></div>
-                                                        </div>
-                                                        <div class="home-category-list__category-grid-name">Games &amp; Hobbies</div>
-                                                    </div>
-                                                </a>
-                                                                                                                                    <a class="home-category-list__category-grid" href="#toyd-for-kids-and-babiespng">
-                                                    <div class="home-category-list__category-grid-content">
-                                                        <div class="lazy-image__container home-category-list__category-grid-thumbnail">
-                                                            <div class="lazy-image__image" style="background-image: url(&quot;http://henato-v1.local/public/uploads/1509543556-h-150-Toys, Kids &amp; Babies.png&quot;);"></div>
-                                                        </div>
-                                                        <div class="home-category-list__category-grid-name">Toys, Kids &amp; Babies.png</div>
-                                                    </div>
-                                                </a>
-                                                                                
+                                                               
+                                                                                           <a class="home-category-list__category-grid" href="http://henato.eglobalmd.com/category/games-and-hobbies">
+                                                  <div class="home-category-list__category-grid-content">
+                                                      <div class="lazy-image__container home-category-list__category-grid-thumbnail">
+                                                          <div class="lazy-image__image" style="background-image: url('http://henato.eglobalmd.com/storage/categories/January2018/8EKosi1tgRDNnLweYLoM.png');"></div>
+                                                      </div>
+                                                      <div class="home-category-list__category-grid-name">Games & Hobbies</div>
+                                                  </div>
+                                              </a>
+                                                                                                                                          <a class="home-category-list__category-grid" href="http://henato.eglobalmd.com/category/games-and-hobbies">
+                                                  <div class="home-category-list__category-grid-content">
+                                                      <div class="lazy-image__container home-category-list__category-grid-thumbnail">
+                                                          <div class="lazy-image__image" style="background-image: url('http://henato.eglobalmd.com/storage/categories/January2018/890s3uuiWjOvnSSQCUD6.png');"></div>
+                                                      </div>
+                                                      <div class="home-category-list__category-grid-name">Toys, Kids & Babies.png</div>
+                                                  </div>
+                                              </a>
+                                              
                                             </div>
                                         </li>
-
-
-
-
-
-                                     
-                                               
+                                                                                                          
                                         <li class="category-image-carousel__item" style="padding: 0px; width: 11.111111111111%;">
                                             <div class="home-category-list__group">
-                                                                                          <a class="home-category-list__category-grid" href="#health-and-beauty">
-                                                    <div class="home-category-list__category-grid-content">
-                                                        <div class="lazy-image__container home-category-list__category-grid-thumbnail">
-                                                            <div class="lazy-image__image" style="background-image: url(&quot;http://henato-v1.local/public/uploads/1509543130-h-150-Health &amp; Beauty.png&quot;);"></div>
-                                                        </div>
-                                                        <div class="home-category-list__category-grid-name">Health &amp; Beauty</div>
-                                                    </div>
-                                                </a>
-                                                                                                                                    <a class="home-category-list__category-grid" href="#watches">
-                                                    <div class="home-category-list__category-grid-content">
-                                                        <div class="lazy-image__container home-category-list__category-grid-thumbnail">
-                                                            <div class="lazy-image__image" style="background-image: url(&quot;http://henato-v1.local/public/uploads/1509543573-h-150-Watches.png&quot;);"></div>
-                                                        </div>
-                                                        <div class="home-category-list__category-grid-name">Watches</div>
-                                                    </div>
-                                                </a>
-                                                                                
+                                                               
+                                                                                           <a class="home-category-list__category-grid" href="http://henato.eglobalmd.com/category/health-and-beauty">
+                                                  <div class="home-category-list__category-grid-content">
+                                                      <div class="lazy-image__container home-category-list__category-grid-thumbnail">
+                                                          <div class="lazy-image__image" style="background-image: url('http://henato.eglobalmd.com/storage/categories/January2018/8gVZPDPKJonr0yXeI5AA.png');"></div>
+                                                      </div>
+                                                      <div class="home-category-list__category-grid-name">Health & Beauty</div>
+                                                  </div>
+                                              </a>
+                                                                                                                                          <a class="home-category-list__category-grid" href="http://henato.eglobalmd.com/category/health-and-beauty">
+                                                  <div class="home-category-list__category-grid-content">
+                                                      <div class="lazy-image__container home-category-list__category-grid-thumbnail">
+                                                          <div class="lazy-image__image" style="background-image: url('http://henato.eglobalmd.com/storage/categories/January2018/YTI63Ri8egB2Pk3y5sVN.png');"></div>
+                                                      </div>
+                                                      <div class="home-category-list__category-grid-name">Watches</div>
+                                                  </div>
+                                              </a>
+                                              
                                             </div>
                                         </li>
-
-
-
-
-
-                                     
-                                               
+                                                                                                          
                                         <li class="category-image-carousel__item" style="padding: 0px; width: 11.111111111111%;">
                                             <div class="home-category-list__group">
-                                                                                          <a class="home-category-list__category-grid" href="#home-and-living">
-                                                    <div class="home-category-list__category-grid-content">
-                                                        <div class="lazy-image__container home-category-list__category-grid-thumbnail">
-                                                            <div class="lazy-image__image" style="background-image: url(&quot;http://henato-v1.local/public/uploads/1509543157-h-150-Home &amp; Living.png&quot;);"></div>
-                                                        </div>
-                                                        <div class="home-category-list__category-grid-name">Home &amp; Living</div>
-                                                    </div>
-                                                </a>
-                                                                                                                                    <a class="home-category-list__category-grid" href="#womens-apparel">
-                                                    <div class="home-category-list__category-grid-content">
-                                                        <div class="lazy-image__container home-category-list__category-grid-thumbnail">
-                                                            <div class="lazy-image__image" style="background-image: url(&quot;http://henato-v1.local/public/uploads/1509543594-h-150-Women's Apparel.png&quot;);"></div>
-                                                        </div>
-                                                        <div class="home-category-list__category-grid-name">Women's Apparel</div>
-                                                    </div>
-                                                </a>
-                                                                                
+                                                               
+                                                                                           <a class="home-category-list__category-grid" href="http://henato.eglobalmd.com/category/home-and-living">
+                                                  <div class="home-category-list__category-grid-content">
+                                                      <div class="lazy-image__container home-category-list__category-grid-thumbnail">
+                                                          <div class="lazy-image__image" style="background-image: url('http://henato.eglobalmd.com/storage/categories/January2018/R3MrzN3z1WME6YaSLwUP.png');"></div>
+                                                      </div>
+                                                      <div class="home-category-list__category-grid-name">Home & Living</div>
+                                                  </div>
+                                              </a>
+                                                                                                                                          <a class="home-category-list__category-grid" href="http://henato.eglobalmd.com/category/home-and-living">
+                                                  <div class="home-category-list__category-grid-content">
+                                                      <div class="lazy-image__container home-category-list__category-grid-thumbnail">
+                                                          <div class="lazy-image__image" style="background-image: url('http://henato.eglobalmd.com/storage/categories/January2018/IhEdzeOX7HdXDLOU1Dqe.png');"></div>
+                                                      </div>
+                                                      <div class="home-category-list__category-grid-name">Women's Apparel</div>
+                                                  </div>
+                                              </a>
+                                              
                                             </div>
                                         </li>
-
-
-
-
-
-                                     
-                                               
+                                                                                                          
                                         <li class="category-image-carousel__item" style="padding: 0px; width: 11.111111111111%;">
                                             <div class="home-category-list__group">
-                                                                                          <a class="home-category-list__category-grid" href="#home-appliances">
-                                                    <div class="home-category-list__category-grid-content">
-                                                        <div class="lazy-image__container home-category-list__category-grid-thumbnail">
-                                                            <div class="lazy-image__image" style="background-image: url(&quot;http://henato-v1.local/public/uploads/1509543176-h-150-Home Appliances.png&quot;);"></div>
-                                                        </div>
-                                                        <div class="home-category-list__category-grid-name">Home Appliances</div>
-                                                    </div>
-                                                </a>
-                                                                                                                                    <a class="home-category-list__category-grid" href="#womens-shoes">
-                                                    <div class="home-category-list__category-grid-content">
-                                                        <div class="lazy-image__container home-category-list__category-grid-thumbnail">
-                                                            <div class="lazy-image__image" style="background-image: url(&quot;http://henato-v1.local/public/uploads/1509543614-h-150-Women's Shoes.png&quot;);"></div>
-                                                        </div>
-                                                        <div class="home-category-list__category-grid-name">Women's Shoes</div>
-                                                    </div>
-                                                </a>
-                                                                                
+                                                               
+                                                                                           <a class="home-category-list__category-grid" href="http://henato.eglobalmd.com/category/home-appliances">
+                                                  <div class="home-category-list__category-grid-content">
+                                                      <div class="lazy-image__container home-category-list__category-grid-thumbnail">
+                                                          <div class="lazy-image__image" style="background-image: url('http://henato.eglobalmd.com/storage/categories/January2018/PedsxFOnfv5s0TNAyaRC.png');"></div>
+                                                      </div>
+                                                      <div class="home-category-list__category-grid-name">Home Appliances</div>
+                                                  </div>
+                                              </a>
+                                                                                                                                          <a class="home-category-list__category-grid" href="http://henato.eglobalmd.com/category/home-appliances">
+                                                  <div class="home-category-list__category-grid-content">
+                                                      <div class="lazy-image__container home-category-list__category-grid-thumbnail">
+                                                          <div class="lazy-image__image" style="background-image: url('http://henato.eglobalmd.com/storage/categories/January2018/bTswnqdMydSeUtNBEPwp.png');"></div>
+                                                      </div>
+                                                      <div class="home-category-list__category-grid-name">Women's Shoes</div>
+                                                  </div>
+                                              </a>
+                                              
                                             </div>
                                         </li>
-
-
-
-
-
-                                     
+                                                                                                        
                                 </ul>
 
-
-                 
                               </div>
-
                           </div>
                       </div>
                   </div>
@@ -364,317 +343,141 @@
           <div class="grid-list-wrapper">
               <div class="grid-list hide-scrollbar" style="height: 294px; padding: 0px;">
 
-                                                                  
-                              <a class="grid-cell grid-cell--with-titles" href="#accessories-3-2" style="order: 0; width: 107px; height: 147px;">
-                                  <div class="grid-cell__logo-image" style="background-size: contain; background-image: url(&quot;http://henato-v1.local/public/uploads/1509542655-h-150-Accessories.png&quot;); background-position: center center; background-repeat: no-repeat; margin: 0px; width: 107px; height: 107px;"></div>
-                                  <div class="grid-cell__title typo-r12">Accessories</div>
-                              </a>
+                                                            
+                        <a class="grid-cell grid-cell--with-titles" href="http://henato.eglobalmd.com/category/accessories" style="order: 0; width: 107px; height: 147px;">
+                            <div class="grid-cell__logo-image" style="background-size: contain; background-image: url('http://henato.eglobalmd.com/storage/categories/January2018/x6PBIpxSixRzkAuWayod.png'); background-position: center center; background-repeat: no-repeat; margin: 0px; width: 107px; height: 107px;"></div>
+                            <div class="grid-cell__title typo-r12">Accessories</div>
+                        </a>
 
 
-                            
-                              <a class="grid-cell grid-cell--with-titles" href="#bags" style="order: 0; width: 107px; height: 147px;">
-                                  <div class="grid-cell__logo-image" style="background-size: contain; background-image: url(&quot;http://henato-v1.local/public/uploads/1509542681-h-150-Bags.png&quot;); background-position: center center; background-repeat: no-repeat; margin: 0px; width: 107px; height: 107px;"></div>
-                                  <div class="grid-cell__title typo-r12">Bags</div>
-                              </a>
+                      
+                        <a class="grid-cell grid-cell--with-titles" href="http://henato.eglobalmd.com/category/bags" style="order: 0; width: 107px; height: 147px;">
+                            <div class="grid-cell__logo-image" style="background-size: contain; background-image: url('http://henato.eglobalmd.com/storage/categories/January2018/eYwjd4377fjgeOSB82bV.png'); background-position: center center; background-repeat: no-repeat; margin: 0px; width: 107px; height: 107px;"></div>
+                            <div class="grid-cell__title typo-r12">Bags</div>
+                        </a>
 
 
-                            
-                              <a class="grid-cell grid-cell--with-titles" href="#computers-and-peripherals" style="order: 0; width: 107px; height: 147px;">
-                                  <div class="grid-cell__logo-image" style="background-size: contain; background-image: url(&quot;http://henato-v1.local/public/uploads/1509542715-h-150-Computers &amp; Peripherals.png&quot;); background-position: center center; background-repeat: no-repeat; margin: 0px; width: 107px; height: 107px;"></div>
-                                  <div class="grid-cell__title typo-r12">Computers &amp; Peripherals</div>
-                              </a>
+                      
+                        <a class="grid-cell grid-cell--with-titles" href="http://henato.eglobalmd.com/category/computers-and-peripherals" style="order: 0; width: 107px; height: 147px;">
+                            <div class="grid-cell__logo-image" style="background-size: contain; background-image: url('http://henato.eglobalmd.com/storage/categories/January2018/eKxswY2eRf3rmZBTLaPI.png'); background-position: center center; background-repeat: no-repeat; margin: 0px; width: 107px; height: 107px;"></div>
+                            <div class="grid-cell__title typo-r12">Computers & Peripherals</div>
+                        </a>
 
 
-                            
-                              <a class="grid-cell grid-cell--with-titles" href="#design-and-crafts" style="order: 0; width: 107px; height: 147px;">
-                                  <div class="grid-cell__logo-image" style="background-size: contain; background-image: url(&quot;http://henato-v1.local/public/uploads/1509542736-h-150-Design &amp; Crafts.png&quot;); background-position: center center; background-repeat: no-repeat; margin: 0px; width: 107px; height: 107px;"></div>
-                                  <div class="grid-cell__title typo-r12">Design &amp; Crafts</div>
-                              </a>
+                      
+                        <a class="grid-cell grid-cell--with-titles" href="http://henato.eglobalmd.com/category/design-and-crafts" style="order: 0; width: 107px; height: 147px;">
+                            <div class="grid-cell__logo-image" style="background-size: contain; background-image: url('http://henato.eglobalmd.com/storage/categories/January2018/XL1nXE1CmfWTGL6Fgsiu.png'); background-position: center center; background-repeat: no-repeat; margin: 0px; width: 107px; height: 107px;"></div>
+                            <div class="grid-cell__title typo-r12">Design & Crafts</div>
+                        </a>
 
 
-                            
-                              <a class="grid-cell grid-cell--with-titles" href="#food-and-beverages" style="order: 0; width: 107px; height: 147px;">
-                                  <div class="grid-cell__logo-image" style="background-size: contain; background-image: url(&quot;http://henato-v1.local/public/uploads/1509543079-h-150-Food &amp; Beverages.png&quot;); background-position: center center; background-repeat: no-repeat; margin: 0px; width: 107px; height: 107px;"></div>
-                                  <div class="grid-cell__title typo-r12">Food &amp; Beverages</div>
-                              </a>
+                      
+                        <a class="grid-cell grid-cell--with-titles" href="http://henato.eglobalmd.com/category/food-and-beverages" style="order: 0; width: 107px; height: 147px;">
+                            <div class="grid-cell__logo-image" style="background-size: contain; background-image: url('http://henato.eglobalmd.com/storage/categories/January2018/g6JrrJhcOdTYqTe6bCmI.png'); background-position: center center; background-repeat: no-repeat; margin: 0px; width: 107px; height: 107px;"></div>
+                            <div class="grid-cell__title typo-r12">Food & Beverages</div>
+                        </a>
 
 
-                            
-                              <a class="grid-cell grid-cell--with-titles" href="#games-and-hobbies" style="order: 0; width: 107px; height: 147px;">
-                                  <div class="grid-cell__logo-image" style="background-size: contain; background-image: url(&quot;http://henato-v1.local/public/uploads/1509543104-h-150-Games &amp; Hobbies.png&quot;); background-position: center center; background-repeat: no-repeat; margin: 0px; width: 107px; height: 107px;"></div>
-                                  <div class="grid-cell__title typo-r12">Games &amp; Hobbies</div>
-                              </a>
+                      
+                        <a class="grid-cell grid-cell--with-titles" href="http://henato.eglobalmd.com/category/games-and-hobbies" style="order: 0; width: 107px; height: 147px;">
+                            <div class="grid-cell__logo-image" style="background-size: contain; background-image: url('http://henato.eglobalmd.com/storage/categories/January2018/8EKosi1tgRDNnLweYLoM.png'); background-position: center center; background-repeat: no-repeat; margin: 0px; width: 107px; height: 107px;"></div>
+                            <div class="grid-cell__title typo-r12">Games & Hobbies</div>
+                        </a>
 
 
-                            
-                              <a class="grid-cell grid-cell--with-titles" href="#health-and-beauty" style="order: 0; width: 107px; height: 147px;">
-                                  <div class="grid-cell__logo-image" style="background-size: contain; background-image: url(&quot;http://henato-v1.local/public/uploads/1509543130-h-150-Health &amp; Beauty.png&quot;); background-position: center center; background-repeat: no-repeat; margin: 0px; width: 107px; height: 107px;"></div>
-                                  <div class="grid-cell__title typo-r12">Health &amp; Beauty</div>
-                              </a>
+                      
+                        <a class="grid-cell grid-cell--with-titles" href="http://henato.eglobalmd.com/category/health-and-beauty" style="order: 0; width: 107px; height: 147px;">
+                            <div class="grid-cell__logo-image" style="background-size: contain; background-image: url('http://henato.eglobalmd.com/storage/categories/January2018/8gVZPDPKJonr0yXeI5AA.png'); background-position: center center; background-repeat: no-repeat; margin: 0px; width: 107px; height: 107px;"></div>
+                            <div class="grid-cell__title typo-r12">Health & Beauty</div>
+                        </a>
 
 
-                            
-                              <a class="grid-cell grid-cell--with-titles" href="#home-and-living" style="order: 0; width: 107px; height: 147px;">
-                                  <div class="grid-cell__logo-image" style="background-size: contain; background-image: url(&quot;http://henato-v1.local/public/uploads/1509543157-h-150-Home &amp; Living.png&quot;); background-position: center center; background-repeat: no-repeat; margin: 0px; width: 107px; height: 107px;"></div>
-                                  <div class="grid-cell__title typo-r12">Home &amp; Living</div>
-                              </a>
+                      
+                        <a class="grid-cell grid-cell--with-titles" href="http://henato.eglobalmd.com/category/home-and-living" style="order: 0; width: 107px; height: 147px;">
+                            <div class="grid-cell__logo-image" style="background-size: contain; background-image: url('http://henato.eglobalmd.com/storage/categories/January2018/R3MrzN3z1WME6YaSLwUP.png'); background-position: center center; background-repeat: no-repeat; margin: 0px; width: 107px; height: 107px;"></div>
+                            <div class="grid-cell__title typo-r12">Home & Living</div>
+                        </a>
 
 
-                            
-                              <a class="grid-cell grid-cell--with-titles" href="#home-appliances" style="order: 0; width: 107px; height: 147px;">
-                                  <div class="grid-cell__logo-image" style="background-size: contain; background-image: url(&quot;http://henato-v1.local/public/uploads/1509543176-h-150-Home Appliances.png&quot;); background-position: center center; background-repeat: no-repeat; margin: 0px; width: 107px; height: 107px;"></div>
-                                  <div class="grid-cell__title typo-r12">Home Appliances</div>
-                              </a>
+                      
+                        <a class="grid-cell grid-cell--with-titles" href="http://henato.eglobalmd.com/category/home-appliances" style="order: 0; width: 107px; height: 147px;">
+                            <div class="grid-cell__logo-image" style="background-size: contain; background-image: url('http://henato.eglobalmd.com/storage/categories/January2018/PedsxFOnfv5s0TNAyaRC.png'); background-position: center center; background-repeat: no-repeat; margin: 0px; width: 107px; height: 107px;"></div>
+                            <div class="grid-cell__title typo-r12">Home Appliances</div>
+                        </a>
 
 
-                            
-                              <a class="grid-cell grid-cell--with-titles" href="#mens-shoes" style="order: 0; width: 107px; height: 147px;">
-                                  <div class="grid-cell__logo-image" style="background-size: contain; background-image: url(&quot;http://henato-v1.local/public/uploads/1509543200-h-150-Men's Shoes.png&quot;); background-position: center center; background-repeat: no-repeat; margin: 0px; width: 107px; height: 107px;"></div>
-                                  <div class="grid-cell__title typo-r12">Men's Shoes</div>
-                              </a>
+                      
+                        <a class="grid-cell grid-cell--with-titles" href="http://henato.eglobalmd.com/category/men%27s-shoes" style="order: 0; width: 107px; height: 147px;">
+                            <div class="grid-cell__logo-image" style="background-size: contain; background-image: url('http://henato.eglobalmd.com/storage/categories/January2018/mqjNiBQMRomKfshWSa7g.png'); background-position: center center; background-repeat: no-repeat; margin: 0px; width: 107px; height: 107px;"></div>
+                            <div class="grid-cell__title typo-r12">Men's Shoes</div>
+                        </a>
 
 
-                            
-                              <a class="grid-cell grid-cell--with-titles" href="#mobile-and-gadgets" style="order: 0; width: 107px; height: 147px;">
-                                  <div class="grid-cell__logo-image" style="background-size: contain; background-image: url(&quot;http://henato-v1.local/public/uploads/1509543228-h-150-Mobile &amp; Gadgets.png&quot;); background-position: center center; background-repeat: no-repeat; margin: 0px; width: 107px; height: 107px;"></div>
-                                  <div class="grid-cell__title typo-r12">Mobile &amp; Gadgets</div>
-                              </a>
+                      
+                        <a class="grid-cell grid-cell--with-titles" href="http://henato.eglobalmd.com/category/mobile-and-gadgets" style="order: 0; width: 107px; height: 147px;">
+                            <div class="grid-cell__logo-image" style="background-size: contain; background-image: url('http://henato.eglobalmd.com/storage/categories/January2018/O8QLL3OXcmccfcTaoviH.png'); background-position: center center; background-repeat: no-repeat; margin: 0px; width: 107px; height: 107px;"></div>
+                            <div class="grid-cell__title typo-r12">Mobile & Gadgets</div>
+                        </a>
 
 
-                            
-                              <a class="grid-cell grid-cell--with-titles" href="#mens-wear" style="order: 0; width: 107px; height: 147px;">
-                                  <div class="grid-cell__logo-image" style="background-size: contain; background-image: url(&quot;http://henato-v1.local/public/uploads/1509543378-h-150-Men's Wear.png&quot;); background-position: center center; background-repeat: no-repeat; margin: 0px; width: 107px; height: 107px;"></div>
-                                  <div class="grid-cell__title typo-r12">Men's Wear</div>
-                              </a>
+                      
+                        <a class="grid-cell grid-cell--with-titles" href="http://henato.eglobalmd.com/category/men%27s-wear" style="order: 0; width: 107px; height: 147px;">
+                            <div class="grid-cell__logo-image" style="background-size: contain; background-image: url('http://henato.eglobalmd.com/storage/categories/January2018/MLALN1pfOleIqjBjEYja.png'); background-position: center center; background-repeat: no-repeat; margin: 0px; width: 107px; height: 107px;"></div>
+                            <div class="grid-cell__title typo-r12">Men's Wear</div>
+                        </a>
 
 
-                            
-                              <a class="grid-cell grid-cell--with-titles" href="#pet-accessories" style="order: 0; width: 107px; height: 147px;">
-                                  <div class="grid-cell__logo-image" style="background-size: contain; background-image: url(&quot;http://henato-v1.local/public/uploads/1509543471-h-150-Pet Accessories.png&quot;); background-position: center center; background-repeat: no-repeat; margin: 0px; width: 107px; height: 107px;"></div>
-                                  <div class="grid-cell__title typo-r12">Pet Accessories</div>
-                              </a>
+                      
+                        <a class="grid-cell grid-cell--with-titles" href="http://henato.eglobalmd.com/category/pet-accessories" style="order: 0; width: 107px; height: 147px;">
+                            <div class="grid-cell__logo-image" style="background-size: contain; background-image: url('http://henato.eglobalmd.com/storage/categories/January2018/zBvPmz9JBrCKXKAAH5Rd.png'); background-position: center center; background-repeat: no-repeat; margin: 0px; width: 107px; height: 107px;"></div>
+                            <div class="grid-cell__title typo-r12">Pet Accessories</div>
+                        </a>
 
 
-                            
-                              <a class="grid-cell grid-cell--with-titles" href="#sports-and-outdoors" style="order: 0; width: 107px; height: 147px;">
-                                  <div class="grid-cell__logo-image" style="background-size: contain; background-image: url(&quot;http://henato-v1.local/public/uploads/1509543500-h-150-Sports &amp; Outdoors.png&quot;); background-position: center center; background-repeat: no-repeat; margin: 0px; width: 107px; height: 107px;"></div>
-                                  <div class="grid-cell__title typo-r12">Sports &amp; Outdoors</div>
-                              </a>
+                      
+                        <a class="grid-cell grid-cell--with-titles" href="http://henato.eglobalmd.com/category/sports-and-outdoors" style="order: 0; width: 107px; height: 147px;">
+                            <div class="grid-cell__logo-image" style="background-size: contain; background-image: url('http://henato.eglobalmd.com/storage/categories/January2018/IHfq8bek6nE2P4G0EXGO.png'); background-position: center center; background-repeat: no-repeat; margin: 0px; width: 107px; height: 107px;"></div>
+                            <div class="grid-cell__title typo-r12">Sports & Outdoors</div>
+                        </a>
 
 
-                            
-                              <a class="grid-cell grid-cell--with-titles" href="#toyd-for-kids-and-babiespng" style="order: 0; width: 107px; height: 147px;">
-                                  <div class="grid-cell__logo-image" style="background-size: contain; background-image: url(&quot;http://henato-v1.local/public/uploads/1509543556-h-150-Toys, Kids &amp; Babies.png&quot;); background-position: center center; background-repeat: no-repeat; margin: 0px; width: 107px; height: 107px;"></div>
-                                  <div class="grid-cell__title typo-r12">Toys, Kids &amp; Babies.png</div>
-                              </a>
+                      
+                        <a class="grid-cell grid-cell--with-titles" href="http://henato.eglobalmd.com/category/toys-kids-and-babies-png" style="order: 0; width: 107px; height: 147px;">
+                            <div class="grid-cell__logo-image" style="background-size: contain; background-image: url('http://henato.eglobalmd.com/storage/categories/January2018/890s3uuiWjOvnSSQCUD6.png'); background-position: center center; background-repeat: no-repeat; margin: 0px; width: 107px; height: 107px;"></div>
+                            <div class="grid-cell__title typo-r12">Toys, Kids & Babies.png</div>
+                        </a>
 
 
-                            
-                              <a class="grid-cell grid-cell--with-titles" href="#watches" style="order: 0; width: 107px; height: 147px;">
-                                  <div class="grid-cell__logo-image" style="background-size: contain; background-image: url(&quot;http://henato-v1.local/public/uploads/1509543573-h-150-Watches.png&quot;); background-position: center center; background-repeat: no-repeat; margin: 0px; width: 107px; height: 107px;"></div>
-                                  <div class="grid-cell__title typo-r12">Watches</div>
-                              </a>
+                      
+                        <a class="grid-cell grid-cell--with-titles" href="http://henato.eglobalmd.com/category/watches" style="order: 0; width: 107px; height: 147px;">
+                            <div class="grid-cell__logo-image" style="background-size: contain; background-image: url('http://henato.eglobalmd.com/storage/categories/January2018/YTI63Ri8egB2Pk3y5sVN.png'); background-position: center center; background-repeat: no-repeat; margin: 0px; width: 107px; height: 107px;"></div>
+                            <div class="grid-cell__title typo-r12">Watches</div>
+                        </a>
 
 
-                            
-                              <a class="grid-cell grid-cell--with-titles" href="#womens-apparel" style="order: 0; width: 107px; height: 147px;">
-                                  <div class="grid-cell__logo-image" style="background-size: contain; background-image: url(&quot;http://henato-v1.local/public/uploads/1509543594-h-150-Women's Apparel.png&quot;); background-position: center center; background-repeat: no-repeat; margin: 0px; width: 107px; height: 107px;"></div>
-                                  <div class="grid-cell__title typo-r12">Women's Apparel</div>
-                              </a>
+                      
+                        <a class="grid-cell grid-cell--with-titles" href="http://henato.eglobalmd.com/category/women%27s-apparel" style="order: 0; width: 107px; height: 147px;">
+                            <div class="grid-cell__logo-image" style="background-size: contain; background-image: url('http://henato.eglobalmd.com/storage/categories/January2018/IhEdzeOX7HdXDLOU1Dqe.png'); background-position: center center; background-repeat: no-repeat; margin: 0px; width: 107px; height: 107px;"></div>
+                            <div class="grid-cell__title typo-r12">Women's Apparel</div>
+                        </a>
 
 
-                            
-                              <a class="grid-cell grid-cell--with-titles" href="#womens-shoes" style="order: 0; width: 107px; height: 147px;">
-                                  <div class="grid-cell__logo-image" style="background-size: contain; background-image: url(&quot;http://henato-v1.local/public/uploads/1509543614-h-150-Women's Shoes.png&quot;); background-position: center center; background-repeat: no-repeat; margin: 0px; width: 107px; height: 107px;"></div>
-                                  <div class="grid-cell__title typo-r12">Women's Shoes</div>
-                              </a>
+                      
+                        <a class="grid-cell grid-cell--with-titles" href="http://henato.eglobalmd.com/category/women%27s-shoes" style="order: 0; width: 107px; height: 147px;">
+                            <div class="grid-cell__logo-image" style="background-size: contain; background-image: url('http://henato.eglobalmd.com/storage/categories/January2018/bTswnqdMydSeUtNBEPwp.png'); background-position: center center; background-repeat: no-repeat; margin: 0px; width: 107px; height: 107px;"></div>
+                            <div class="grid-cell__title typo-r12">Women's Shoes</div>
+                        </a>
 
 
-                                            
-
-
-
-
+                                      
               </div>
           </div>
       </div>
 
     </section>
+    
 
-    <section id="sale" class="mt-40"> 
-      <div class="container">
-          <div class="row">      
-            <div class="col">
-              <h3 class="section-title">Today's Sale</h3>
-            </div>
-          </div> 
-          <div class="row mt-20 pl-15 pr-15 sale-products-slide">
-            <div class="col-6 col-md-2 pl-5 pr-5">
-                <div class="product-grid-item-group">
-                  <a class="" href="#">
-                    <div class="product-img-container">
-                      <img src="http://henato-v1.local/public/uploads/1510582904-h-250-European Ladise Solid PU Casual Satchel Shoulder Zipper Bag dadatop.jpg" class="img-fluid">
-                    </div>
-                    <div class="product-details-container">
-                      <div class="product-title">European Ladise Solid Pu Casual Satchel Shoulder Zipper Bag Dadatop</div>
-                      <div class="row mt-10">
-                        <div class="col">
-                          <div class="product-price"><span class="regular-price stroke">$179.90</span><span class="sale-price stroke">$109.90</span></div>
-                        </div>
-                        <div class="col text-right">
-                          <div class="free-shipping"><i class="fa fa-truck" aria-hidden="true"></i></div>
-                        </div>
-                      </div>
-                    </div>                    
-                  </a>
-                </div>
-            </div>
-            <div class="col-6 col-md-2 pl-5 pr-5">
-                <div class="product-grid-item-group">
-                  <a class="" href="#">
-                    <div class="product-img-container">
-                      <img src="http://henato-v1.local/public/uploads/1510583399-h-250-School Bag Travel Leather Backpack Satchel.jpg" class="img-fluid">
-                    </div>
-                    <div class="product-details-container">
-                      <div class="product-title">European Ladise Solid Pu Casual Satchel Shoulder Zipper Bag Dadatop</div>
-                      <div class="row mt-10">
-                        <div class="col">
-                          <div class="product-price"><span class="regular-price stroke">$179.90</span><span class="sale-price stroke">$109.90</span></div>
-                        </div>
-                        <div class="col text-right">
-                          <div class="free-shipping"><i class="fa fa-truck" aria-hidden="true"></i></div>
-                        </div>
-                      </div>
-                    </div>                    
-                  </a>
-                </div>
-            </div>
-            <div class="col-6 col-md-2 pl-5 pr-5">
-                <div class="product-grid-item-group">
-                  <a class="" href="#">
-                    <div class="product-img-container">
-                      <img src="http://henato-v1.local/public/uploads/1510582904-h-250-European Ladise Solid PU Casual Satchel Shoulder Zipper Bag dadatop.jpg" class="img-fluid">
-                    </div>
-                    <div class="product-details-container">
-                      <div class="product-title">European Ladise Solid Pu Casual Satchel Shoulder Zipper Bag Dadatop</div>
-                      <div class="row mt-10">
-                        <div class="col">
-                          <div class="product-price"><span class="regular-price stroke">$179.90</span><span class="sale-price stroke">$109.90</span></div>
-                        </div>
-                        <div class="col text-right">
-                          <div class="free-shipping"><i class="fa fa-truck" aria-hidden="true"></i></div>
-                        </div>
-                      </div>
-                    </div>                    
-                  </a>
-                </div>
-            </div>
-            <div class="col-6 col-md-2 pl-5 pr-5">
-                <div class="product-grid-item-group">
-                  <a class="" href="#">
-                    <div class="product-img-container">
-                      <img src="http://henato-v1.local/public/uploads/1510583399-h-250-School Bag Travel Leather Backpack Satchel.jpg" class="img-fluid">
-                    </div>
-                    <div class="product-details-container">
-                      <div class="product-title">European Ladise Solid Pu Casual Satchel Shoulder Zipper Bag Dadatop</div>
-                      <div class="row mt-10">
-                        <div class="col">
-                          <div class="product-price"><span class="regular-price stroke">$179.90</span><span class="sale-price stroke">$109.90</span></div>
-                        </div>
-                        <div class="col text-right">
-                          <div class="free-shipping"><i class="fa fa-truck" aria-hidden="true"></i></div>
-                        </div>
-                      </div>
-                    </div>                    
-                  </a>
-                </div>
-            </div>
-            <div class="col-6 col-md-2 pl-5 pr-5">
-                <div class="product-grid-item-group">
-                  <a class="" href="#">
-                    <div class="product-img-container">
-                      <img src="http://henato-v1.local/public/uploads/1510582904-h-250-European Ladise Solid PU Casual Satchel Shoulder Zipper Bag dadatop.jpg" class="img-fluid">
-                    </div>
-                    <div class="product-details-container">
-                      <div class="product-title">European Ladise Solid Pu Casual Satchel Shoulder Zipper Bag Dadatop</div>
-                      <div class="row mt-10">
-                        <div class="col">
-                          <div class="product-price"><span class="regular-price stroke">$179.90</span><span class="sale-price stroke">$109.90</span></div>
-                        </div>
-                        <div class="col text-right">
-                          <div class="free-shipping"><i class="fa fa-truck" aria-hidden="true"></i></div>
-                        </div>
-                      </div>
-                    </div>                    
-                  </a>
-                </div>
-            </div>
-            <div class="col-6 col-md-2 pl-5 pr-5">
-                <div class="product-grid-item-group">
-                  <a class="" href="#">
-                    <div class="product-img-container">
-                      <img src="http://henato-v1.local/public/uploads/1510583399-h-250-School Bag Travel Leather Backpack Satchel.jpg" class="img-fluid">
-                    </div>
-                    <div class="product-details-container">
-                      <div class="product-title">European Ladise Solid Pu Casual Satchel Shoulder Zipper Bag Dadatop</div>
-                      <div class="row mt-10">
-                        <div class="col">
-                          <div class="product-price"><span class="regular-price stroke">$179.90</span><span class="sale-price stroke">$109.90</span></div>
-                        </div>
-                        <div class="col text-right">
-                          <div class="free-shipping"><i class="fa fa-truck" aria-hidden="true"></i></div>
-                        </div>
-                      </div>
-                    </div>                    
-                  </a>
-                </div>
-            </div>  
-            <div class="col-6 col-md-2 pl-5 pr-5">
-                <div class="product-grid-item-group">
-                  <a class="" href="#">
-                    <div class="product-img-container">
-                      <img src="http://henato-v1.local/public/uploads/1510582904-h-250-European Ladise Solid PU Casual Satchel Shoulder Zipper Bag dadatop.jpg" class="img-fluid">
-                    </div>
-                    <div class="product-details-container">
-                      <div class="product-title">European Ladise Solid Pu Casual Satchel Shoulder Zipper Bag Dadatop</div>
-                      <div class="row mt-10">
-                        <div class="col">
-                          <div class="product-price"><span class="regular-price stroke">$179.90</span><span class="sale-price stroke">$109.90</span></div>
-                        </div>
-                        <div class="col text-right">
-                          <div class="free-shipping"><i class="fa fa-truck" aria-hidden="true"></i></div>
-                        </div>
-                      </div>
-                    </div>                    
-                  </a>
-                </div>
-            </div>
-            <div class="col-6 col-md-2 pl-5 pr-5">
-                <div class="product-grid-item-group">
-                  <a class="" href="#">
-                    <div class="product-img-container">
-                      <img src="http://henato-v1.local/public/uploads/1510583399-h-250-School Bag Travel Leather Backpack Satchel.jpg" class="img-fluid">
-                    </div>
-                    <div class="product-details-container">
-                      <div class="product-title">European Ladise Solid Pu Casual Satchel Shoulder Zipper Bag Dadatop</div>
-                      <div class="row mt-10">
-                        <div class="col">
-                          <div class="product-price"><span class="regular-price stroke">$179.90</span><span class="sale-price stroke">$109.90</span></div>
-                        </div>
-                        <div class="col text-right">
-                          <div class="free-shipping"><i class="fa fa-truck" aria-hidden="true"></i></div>
-                        </div>
-                      </div>
-                    </div>                    
-                  </a>
-                </div>
-            </div>                                                                        
-          </div>
-
-
-      </div>
-    </section>
-
+    
     <section id="recommended" class="mt-40"> 
       <div class="container">
           <div class="row">      
@@ -683,17 +486,17 @@
             </div>
           </div> 
           <div class="row mt-20 pl-15 pr-15 recommended-products-slide">
-            <div class="col-6 col-md-2 pl-5 pr-5">
+                        <div class="col-6 col-md-2 pl-5 pr-5">
                 <div class="product-grid-item-group">
-                  <a class="" href="#">
+                  <a class="" href="http://henato.eglobalmd.com/product/european-ladise-solid-pu-casual-satchel-shoulder-zipper-bag-dadatop">
                     <div class="product-img-container">
-                      <img src="http://henato-v1.local/public/uploads/1510582904-h-250-European Ladise Solid PU Casual Satchel Shoulder Zipper Bag dadatop.jpg" class="img-fluid">
+                      <img src="http://henato.eglobalmd.com/storage/products-items/January2018/Ug8nIUqH0VWdUR2zjMhL.jpg" class="img-fluid">
                     </div>
                     <div class="product-details-container">
-                      <div class="product-title">European Ladise Solid Pu Casual Satchel Shoulder Zipper Bag Dadatop</div>
+                      <div class="product-title">European Ladise Solid PU Casual Satchel Shoulder Zipper Bag dadatop</div>
                       <div class="row mt-10">
-                        <div class="col">
-                          <div class="product-price"><span class="regular-price stroke">$179.90</span><span class="sale-price stroke">$109.90</span></div>
+                        <div class="col-8">
+                          <div class="product-price"><span class="regular-price ">$20.75</span> </div>
                         </div>
                         <div class="col text-right">
                           <div class="free-shipping"><i class="fa fa-truck" aria-hidden="true"></i></div>
@@ -703,17 +506,17 @@
                   </a>
                 </div>
             </div>
-            <div class="col-6 col-md-2 pl-5 pr-5">
+                        <div class="col-6 col-md-2 pl-5 pr-5">
                 <div class="product-grid-item-group">
-                  <a class="" href="#">
+                  <a class="" href="http://henato.eglobalmd.com/product/backpack-wallet-satchel-rucksack-handbag-light-blue">
                     <div class="product-img-container">
-                      <img src="http://henato-v1.local/public/uploads/1510583399-h-250-School Bag Travel Leather Backpack Satchel.jpg" class="img-fluid">
+                      <img src="http://henato.eglobalmd.com/storage/products-items/January2018/6BXWwXTSAi8Ak0jdXq76.jpg" class="img-fluid">
                     </div>
                     <div class="product-details-container">
-                      <div class="product-title">European Ladise Solid Pu Casual Satchel Shoulder Zipper Bag Dadatop</div>
+                      <div class="product-title">Backpack Wallet Satchel Rucksack Handbag Light Blue</div>
                       <div class="row mt-10">
-                        <div class="col">
-                          <div class="product-price"><span class="regular-price stroke">$179.90</span><span class="sale-price stroke">$109.90</span></div>
+                        <div class="col-8">
+                          <div class="product-price"><span class="regular-price ">$14.83</span> </div>
                         </div>
                         <div class="col text-right">
                           <div class="free-shipping"><i class="fa fa-truck" aria-hidden="true"></i></div>
@@ -723,17 +526,17 @@
                   </a>
                 </div>
             </div>
-            <div class="col-6 col-md-2 pl-5 pr-5">
+                        <div class="col-6 col-md-2 pl-5 pr-5">
                 <div class="product-grid-item-group">
-                  <a class="" href="#">
+                  <a class="" href="http://henato.eglobalmd.com/product/men-wallet-pu-leather-wallet-fashion-portable-short-card-holder-handbag">
                     <div class="product-img-container">
-                      <img src="http://henato-v1.local/public/uploads/1510582904-h-250-European Ladise Solid PU Casual Satchel Shoulder Zipper Bag dadatop.jpg" class="img-fluid">
+                      <img src="http://henato.eglobalmd.com/storage/products-items/January2018/u7eP0FkNQ5neqsiFOgv9.jpg" class="img-fluid">
                     </div>
                     <div class="product-details-container">
-                      <div class="product-title">European Ladise Solid Pu Casual Satchel Shoulder Zipper Bag Dadatop</div>
+                      <div class="product-title">Men Wallet PU Leather Wallet Fashion Portable Short Card Holder Handbag</div>
                       <div class="row mt-10">
-                        <div class="col">
-                          <div class="product-price"><span class="regular-price stroke">$179.90</span><span class="sale-price stroke">$109.90</span></div>
+                        <div class="col-8">
+                          <div class="product-price"><span class="regular-price ">$56.29</span> </div>
                         </div>
                         <div class="col text-right">
                           <div class="free-shipping"><i class="fa fa-truck" aria-hidden="true"></i></div>
@@ -743,17 +546,17 @@
                   </a>
                 </div>
             </div>
-            <div class="col-6 col-md-2 pl-5 pr-5">
+                        <div class="col-6 col-md-2 pl-5 pr-5">
                 <div class="product-grid-item-group">
-                  <a class="" href="#">
+                  <a class="" href="http://henato.eglobalmd.com/product/fashion-women-single-shoulder-bag-floral-canvas-bucket-bag-casual-shoulder-bag">
                     <div class="product-img-container">
-                      <img src="http://henato-v1.local/public/uploads/1510583399-h-250-School Bag Travel Leather Backpack Satchel.jpg" class="img-fluid">
+                      <img src="http://henato.eglobalmd.com/storage/products-items/January2018/to0BJw3bO7RsETVo2O7O.jpg" class="img-fluid">
                     </div>
                     <div class="product-details-container">
-                      <div class="product-title">European Ladise Solid Pu Casual Satchel Shoulder Zipper Bag Dadatop</div>
+                      <div class="product-title">Fashion Women Single-shoulder Bag Floral Canvas Bucket Bag Casual Shoulder Bag</div>
                       <div class="row mt-10">
-                        <div class="col">
-                          <div class="product-price"><span class="regular-price stroke">$179.90</span><span class="sale-price stroke">$109.90</span></div>
+                        <div class="col-8">
+                          <div class="product-price"><span class="regular-price ">$7.10</span> </div>
                         </div>
                         <div class="col text-right">
                           <div class="free-shipping"><i class="fa fa-truck" aria-hidden="true"></i></div>
@@ -763,17 +566,17 @@
                   </a>
                 </div>
             </div>
-            <div class="col-6 col-md-2 pl-5 pr-5">
+                        <div class="col-6 col-md-2 pl-5 pr-5">
                 <div class="product-grid-item-group">
-                  <a class="" href="#">
+                  <a class="" href="http://henato.eglobalmd.com/product/school-bag-travel-leather-backpack-satchel">
                     <div class="product-img-container">
-                      <img src="http://henato-v1.local/public/uploads/1510582904-h-250-European Ladise Solid PU Casual Satchel Shoulder Zipper Bag dadatop.jpg" class="img-fluid">
+                      <img src="http://henato.eglobalmd.com/storage/products-items/January2018/uYHFSIUcyWIrZ8mu1nxg.jpg" class="img-fluid">
                     </div>
                     <div class="product-details-container">
-                      <div class="product-title">European Ladise Solid Pu Casual Satchel Shoulder Zipper Bag Dadatop</div>
+                      <div class="product-title">School Bag Travel Leather Backpack Satchel</div>
                       <div class="row mt-10">
-                        <div class="col">
-                          <div class="product-price"><span class="regular-price stroke">$179.90</span><span class="sale-price stroke">$109.90</span></div>
+                        <div class="col-8">
+                          <div class="product-price"><span class="regular-price ">$19.11</span> </div>
                         </div>
                         <div class="col text-right">
                           <div class="free-shipping"><i class="fa fa-truck" aria-hidden="true"></i></div>
@@ -783,37 +586,17 @@
                   </a>
                 </div>
             </div>
-            <div class="col-6 col-md-2 pl-5 pr-5">
+                        <div class="col-6 col-md-2 pl-5 pr-5">
                 <div class="product-grid-item-group">
-                  <a class="" href="#">
+                  <a class="" href="http://henato.eglobalmd.com/product/sun-earth-and-u-2-in-1-handbag-shoulder-bag-canvas-boston">
                     <div class="product-img-container">
-                      <img src="http://henato-v1.local/public/uploads/1510583399-h-250-School Bag Travel Leather Backpack Satchel.jpg" class="img-fluid">
+                      <img src="http://henato.eglobalmd.com/storage/products-items/January2018/v7SiJKpKk8a4oYM6BmNn.jpg" class="img-fluid">
                     </div>
                     <div class="product-details-container">
-                      <div class="product-title">European Ladise Solid Pu Casual Satchel Shoulder Zipper Bag Dadatop</div>
+                      <div class="product-title">Sun Earth &amp; U 2 in 1 Handbag Shoulder bag Canvas Boston</div>
                       <div class="row mt-10">
-                        <div class="col">
-                          <div class="product-price"><span class="regular-price stroke">$179.90</span><span class="sale-price stroke">$109.90</span></div>
-                        </div>
-                        <div class="col text-right">
-                          <div class="free-shipping"><i class="fa fa-truck" aria-hidden="true"></i></div>
-                        </div>
-                      </div>
-                    </div>                    
-                  </a>
-                </div>
-            </div>  
-            <div class="col-6 col-md-2 pl-5 pr-5">
-                <div class="product-grid-item-group">
-                  <a class="" href="#">
-                    <div class="product-img-container">
-                      <img src="http://henato-v1.local/public/uploads/1510582904-h-250-European Ladise Solid PU Casual Satchel Shoulder Zipper Bag dadatop.jpg" class="img-fluid">
-                    </div>
-                    <div class="product-details-container">
-                      <div class="product-title">European Ladise Solid Pu Casual Satchel Shoulder Zipper Bag Dadatop</div>
-                      <div class="row mt-10">
-                        <div class="col">
-                          <div class="product-price"><span class="regular-price stroke">$179.90</span><span class="sale-price stroke">$109.90</span></div>
+                        <div class="col-8">
+                          <div class="product-price"><span class="regular-price ">$10.00</span> </div>
                         </div>
                         <div class="col text-right">
                           <div class="free-shipping"><i class="fa fa-truck" aria-hidden="true"></i></div>
@@ -823,17 +606,17 @@
                   </a>
                 </div>
             </div>
-            <div class="col-6 col-md-2 pl-5 pr-5">
+                        <div class="col-6 col-md-2 pl-5 pr-5">
                 <div class="product-grid-item-group">
-                  <a class="" href="#">
+                  <a class="" href="http://henato.eglobalmd.com/product/girl-fashion-tassel-tote-crossbody-shoulder-handbag-ailigap">
                     <div class="product-img-container">
-                      <img src="http://henato-v1.local/public/uploads/1510583399-h-250-School Bag Travel Leather Backpack Satchel.jpg" class="img-fluid">
+                      <img src="http://henato.eglobalmd.com/storage/products-items/January2018/RwQmtRHr79RB1XLiuvVl.jpg" class="img-fluid">
                     </div>
                     <div class="product-details-container">
-                      <div class="product-title">European Ladise Solid Pu Casual Satchel Shoulder Zipper Bag Dadatop</div>
+                      <div class="product-title">Girl Fashion Tassel Tote Crossbody Shoulder Handbag ailigap</div>
                       <div class="row mt-10">
-                        <div class="col">
-                          <div class="product-price"><span class="regular-price stroke">$179.90</span><span class="sale-price stroke">$109.90</span></div>
+                        <div class="col-8">
+                          <div class="product-price"><span class="regular-price ">$20.29</span> </div>
                         </div>
                         <div class="col text-right">
                           <div class="free-shipping"><i class="fa fa-truck" aria-hidden="true"></i></div>
@@ -842,10 +625,29 @@
                     </div>                    
                   </a>
                 </div>
-            </div>                                                                        
+            </div>
+                        <div class="col-6 col-md-2 pl-5 pr-5">
+                <div class="product-grid-item-group">
+                  <a class="" href="http://henato.eglobalmd.com/product/mg-bag-tassel-black-female-rhomboids-bag-women-embossing">
+                    <div class="product-img-container">
+                      <img src="http://henato.eglobalmd.com/storage/products-items/January2018/PYC6QaOpqMc6BGx0DA0I.jpg" class="img-fluid">
+                    </div>
+                    <div class="product-details-container">
+                      <div class="product-title">MG bag Tassel Black Female Rhomboids Bag Women Embossing</div>
+                      <div class="row mt-10">
+                        <div class="col-8">
+                          <div class="product-price"><span class="regular-price  stroke ">$6.50</span> <span class="sale-price">$5.50</span></div>
+                        </div>
+                        <div class="col text-right">
+                          <div class="free-shipping"><i class="fa fa-truck" aria-hidden="true"></i></div>
+                        </div>
+                      </div>
+                    </div>                    
+                  </a>
+                </div>
+            </div>
+                           
           </div>
-
-
       </div>
     </section>
 
@@ -856,18 +658,18 @@
               <h3 class="section-title">Featured Products</h3>
             </div>
           </div> 
-          <div class="row mt-20 pl-15 pr-15 featured-products-slide">
-            <div class="col-6 col-md-2 pl-5 pr-5">
+          <div class="row mt-20 pl-15 pr-15 recommended-products-slide">
+                        <div class="col-6 col-md-2 pl-5 pr-5">
                 <div class="product-grid-item-group">
-                  <a class="" href="#">
+                  <a class="" href="http://henato.eglobalmd.com/product/european-ladise-solid-pu-casual-satchel-shoulder-zipper-bag-dadatop">
                     <div class="product-img-container">
-                      <img src="http://henato-v1.local/public/uploads/1510582904-h-250-European Ladise Solid PU Casual Satchel Shoulder Zipper Bag dadatop.jpg" class="img-fluid">
+                      <img src="http://henato.eglobalmd.com/storage/products-items/January2018/Ug8nIUqH0VWdUR2zjMhL.jpg" class="img-fluid">
                     </div>
                     <div class="product-details-container">
-                      <div class="product-title">European Ladise Solid Pu Casual Satchel Shoulder Zipper Bag Dadatop</div>
+                      <div class="product-title">European Ladise Solid PU Casual Satchel Shoulder Zipper Bag dadatop</div>
                       <div class="row mt-10">
-                        <div class="col">
-                          <div class="product-price"><span class="regular-price stroke">$179.90</span><span class="sale-price stroke">$109.90</span></div>
+                        <div class="col-8">
+                          <div class="product-price"><span class="regular-price ">$20.75</span> </div>
                         </div>
                         <div class="col text-right">
                           <div class="free-shipping"><i class="fa fa-truck" aria-hidden="true"></i></div>
@@ -877,17 +679,17 @@
                   </a>
                 </div>
             </div>
-            <div class="col-6 col-md-2 pl-5 pr-5">
+                        <div class="col-6 col-md-2 pl-5 pr-5">
                 <div class="product-grid-item-group">
-                  <a class="" href="#">
+                  <a class="" href="http://henato.eglobalmd.com/product/backpack-wallet-satchel-rucksack-handbag-light-blue">
                     <div class="product-img-container">
-                      <img src="http://henato-v1.local/public/uploads/1510583399-h-250-School Bag Travel Leather Backpack Satchel.jpg" class="img-fluid">
+                      <img src="http://henato.eglobalmd.com/storage/products-items/January2018/6BXWwXTSAi8Ak0jdXq76.jpg" class="img-fluid">
                     </div>
                     <div class="product-details-container">
-                      <div class="product-title">European Ladise Solid Pu Casual Satchel Shoulder Zipper Bag Dadatop</div>
+                      <div class="product-title">Backpack Wallet Satchel Rucksack Handbag Light Blue</div>
                       <div class="row mt-10">
-                        <div class="col">
-                          <div class="product-price"><span class="regular-price stroke">$179.90</span><span class="sale-price stroke">$109.90</span></div>
+                        <div class="col-8">
+                          <div class="product-price"><span class="regular-price ">$14.83</span> </div>
                         </div>
                         <div class="col text-right">
                           <div class="free-shipping"><i class="fa fa-truck" aria-hidden="true"></i></div>
@@ -897,17 +699,17 @@
                   </a>
                 </div>
             </div>
-            <div class="col-6 col-md-2 pl-5 pr-5">
+                        <div class="col-6 col-md-2 pl-5 pr-5">
                 <div class="product-grid-item-group">
-                  <a class="" href="#">
+                  <a class="" href="http://henato.eglobalmd.com/product/men-wallet-pu-leather-wallet-fashion-portable-short-card-holder-handbag">
                     <div class="product-img-container">
-                      <img src="http://henato-v1.local/public/uploads/1510582904-h-250-European Ladise Solid PU Casual Satchel Shoulder Zipper Bag dadatop.jpg" class="img-fluid">
+                      <img src="http://henato.eglobalmd.com/storage/products-items/January2018/u7eP0FkNQ5neqsiFOgv9.jpg" class="img-fluid">
                     </div>
                     <div class="product-details-container">
-                      <div class="product-title">European Ladise Solid Pu Casual Satchel Shoulder Zipper Bag Dadatop</div>
+                      <div class="product-title">Men Wallet PU Leather Wallet Fashion Portable Short Card Holder Handbag</div>
                       <div class="row mt-10">
-                        <div class="col">
-                          <div class="product-price"><span class="regular-price stroke">$179.90</span><span class="sale-price stroke">$109.90</span></div>
+                        <div class="col-8">
+                          <div class="product-price"><span class="regular-price ">$56.29</span> </div>
                         </div>
                         <div class="col text-right">
                           <div class="free-shipping"><i class="fa fa-truck" aria-hidden="true"></i></div>
@@ -917,17 +719,17 @@
                   </a>
                 </div>
             </div>
-            <div class="col-6 col-md-2 pl-5 pr-5">
+                        <div class="col-6 col-md-2 pl-5 pr-5">
                 <div class="product-grid-item-group">
-                  <a class="" href="#">
+                  <a class="" href="http://henato.eglobalmd.com/product/fashion-women-single-shoulder-bag-floral-canvas-bucket-bag-casual-shoulder-bag">
                     <div class="product-img-container">
-                      <img src="http://henato-v1.local/public/uploads/1510583399-h-250-School Bag Travel Leather Backpack Satchel.jpg" class="img-fluid">
+                      <img src="http://henato.eglobalmd.com/storage/products-items/January2018/to0BJw3bO7RsETVo2O7O.jpg" class="img-fluid">
                     </div>
                     <div class="product-details-container">
-                      <div class="product-title">European Ladise Solid Pu Casual Satchel Shoulder Zipper Bag Dadatop</div>
+                      <div class="product-title">Fashion Women Single-shoulder Bag Floral Canvas Bucket Bag Casual Shoulder Bag</div>
                       <div class="row mt-10">
-                        <div class="col">
-                          <div class="product-price"><span class="regular-price stroke">$179.90</span><span class="sale-price stroke">$109.90</span></div>
+                        <div class="col-8">
+                          <div class="product-price"><span class="regular-price ">$7.10</span> </div>
                         </div>
                         <div class="col text-right">
                           <div class="free-shipping"><i class="fa fa-truck" aria-hidden="true"></i></div>
@@ -937,17 +739,17 @@
                   </a>
                 </div>
             </div>
-            <div class="col-6 col-md-2 pl-5 pr-5">
+                        <div class="col-6 col-md-2 pl-5 pr-5">
                 <div class="product-grid-item-group">
-                  <a class="" href="#">
+                  <a class="" href="http://henato.eglobalmd.com/product/school-bag-travel-leather-backpack-satchel">
                     <div class="product-img-container">
-                      <img src="http://henato-v1.local/public/uploads/1510582904-h-250-European Ladise Solid PU Casual Satchel Shoulder Zipper Bag dadatop.jpg" class="img-fluid">
+                      <img src="http://henato.eglobalmd.com/storage/products-items/January2018/uYHFSIUcyWIrZ8mu1nxg.jpg" class="img-fluid">
                     </div>
                     <div class="product-details-container">
-                      <div class="product-title">European Ladise Solid Pu Casual Satchel Shoulder Zipper Bag Dadatop</div>
+                      <div class="product-title">School Bag Travel Leather Backpack Satchel</div>
                       <div class="row mt-10">
-                        <div class="col">
-                          <div class="product-price"><span class="regular-price stroke">$179.90</span><span class="sale-price stroke">$109.90</span></div>
+                        <div class="col-8">
+                          <div class="product-price"><span class="regular-price ">$19.11</span> </div>
                         </div>
                         <div class="col text-right">
                           <div class="free-shipping"><i class="fa fa-truck" aria-hidden="true"></i></div>
@@ -957,37 +759,17 @@
                   </a>
                 </div>
             </div>
-            <div class="col-6 col-md-2 pl-5 pr-5">
+                        <div class="col-6 col-md-2 pl-5 pr-5">
                 <div class="product-grid-item-group">
-                  <a class="" href="#">
+                  <a class="" href="http://henato.eglobalmd.com/product/sun-earth-and-u-2-in-1-handbag-shoulder-bag-canvas-boston">
                     <div class="product-img-container">
-                      <img src="http://henato-v1.local/public/uploads/1510583399-h-250-School Bag Travel Leather Backpack Satchel.jpg" class="img-fluid">
+                      <img src="http://henato.eglobalmd.com/storage/products-items/January2018/v7SiJKpKk8a4oYM6BmNn.jpg" class="img-fluid">
                     </div>
                     <div class="product-details-container">
-                      <div class="product-title">European Ladise Solid Pu Casual Satchel Shoulder Zipper Bag Dadatop</div>
+                      <div class="product-title">Sun Earth &amp; U 2 in 1 Handbag Shoulder bag Canvas Boston</div>
                       <div class="row mt-10">
-                        <div class="col">
-                          <div class="product-price"><span class="regular-price stroke">$179.90</span><span class="sale-price stroke">$109.90</span></div>
-                        </div>
-                        <div class="col text-right">
-                          <div class="free-shipping"><i class="fa fa-truck" aria-hidden="true"></i></div>
-                        </div>
-                      </div>
-                    </div>                    
-                  </a>
-                </div>
-            </div> 
-            <div class="col-6 col-md-2 pl-5 pr-5">
-                <div class="product-grid-item-group">
-                  <a class="" href="#">
-                    <div class="product-img-container">
-                      <img src="http://henato-v1.local/public/uploads/1510582904-h-250-European Ladise Solid PU Casual Satchel Shoulder Zipper Bag dadatop.jpg" class="img-fluid">
-                    </div>
-                    <div class="product-details-container">
-                      <div class="product-title">1 European Ladise Solid Pu Casual Satchel Shoulder Zipper Bag Dadatop</div>
-                      <div class="row mt-10">
-                        <div class="col">
-                          <div class="product-price"><span class="regular-price stroke">$179.90</span><span class="sale-price stroke">$109.90</span></div>
+                        <div class="col-8">
+                          <div class="product-price"><span class="regular-price ">$10.00</span> </div>
                         </div>
                         <div class="col text-right">
                           <div class="free-shipping"><i class="fa fa-truck" aria-hidden="true"></i></div>
@@ -997,17 +779,17 @@
                   </a>
                 </div>
             </div>
-            <div class="col-6 col-md-2 pl-5 pr-5">
+                        <div class="col-6 col-md-2 pl-5 pr-5">
                 <div class="product-grid-item-group">
-                  <a class="" href="#">
+                  <a class="" href="http://henato.eglobalmd.com/product/girl-fashion-tassel-tote-crossbody-shoulder-handbag-ailigap">
                     <div class="product-img-container">
-                      <img src="http://henato-v1.local/public/uploads/1510583399-h-250-School Bag Travel Leather Backpack Satchel.jpg" class="img-fluid">
+                      <img src="http://henato.eglobalmd.com/storage/products-items/January2018/RwQmtRHr79RB1XLiuvVl.jpg" class="img-fluid">
                     </div>
                     <div class="product-details-container">
-                      <div class="product-title">2 European Ladise Solid Pu Casual Satchel Shoulder Zipper Bag Dadatop</div>
+                      <div class="product-title">Girl Fashion Tassel Tote Crossbody Shoulder Handbag ailigap</div>
                       <div class="row mt-10">
-                        <div class="col">
-                          <div class="product-price"><span class="regular-price stroke">$179.90</span><span class="sale-price stroke">$109.90</span></div>
+                        <div class="col-8">
+                          <div class="product-price"><span class="regular-price ">$20.29</span> </div>
                         </div>
                         <div class="col text-right">
                           <div class="free-shipping"><i class="fa fa-truck" aria-hidden="true"></i></div>
@@ -1016,11 +798,29 @@
                     </div>                    
                   </a>
                 </div>
-            </div>                                                                           
+            </div>
+                        <div class="col-6 col-md-2 pl-5 pr-5">
+                <div class="product-grid-item-group">
+                  <a class="" href="http://henato.eglobalmd.com/product/mg-bag-tassel-black-female-rhomboids-bag-women-embossing">
+                    <div class="product-img-container">
+                      <img src="http://henato.eglobalmd.com/storage/products-items/January2018/PYC6QaOpqMc6BGx0DA0I.jpg" class="img-fluid">
+                    </div>
+                    <div class="product-details-container">
+                      <div class="product-title">MG bag Tassel Black Female Rhomboids Bag Women Embossing</div>
+                      <div class="row mt-10">
+                        <div class="col-8">
+                          <div class="product-price"><span class="regular-price  stroke ">$6.50</span> <span class="sale-price">$5.50</span></div>
+                        </div>
+                        <div class="col text-right">
+                          <div class="free-shipping"><i class="fa fa-truck" aria-hidden="true"></i></div>
+                        </div>
+                      </div>
+                    </div>                    
+                  </a>
+                </div>
+            </div>
+                           
           </div>
-
-
-
       </div>
     </section>
 
@@ -1032,53 +832,61 @@
             </div>
           </div> 
           <div class="row mt-20 pl-15 pr-15">
-            <div class="col-6 col-md-2 pl-5 pr-5 mb-20">
+            
+                        <div class="col-6 col-md-2 pl-5 pr-5 mb-20">
               <div class="brands-grid-item-group">
                 <a class="" href="#">
-                  <img src="images/sample-images/brands/blackmores.jpg" class="img-fluid">
+                  <img src="http://henato.eglobalmd.com/storage/manufacturers/January2018/B9Lf2gHfUWFHNRI8NQdj.jpg" class="img-fluid">
                 </a>
               </div>
             </div>
-            <div class="col-6 col-md-2 pl-5 pr-5  mb-20">
+                        <div class="col-6 col-md-2 pl-5 pr-5 mb-20">
               <div class="brands-grid-item-group">
                 <a class="" href="#">
-                  <img src="images/sample-images/brands/brands.jpg" class="img-fluid">
+                  <img src="http://henato.eglobalmd.com/storage/manufacturers/January2018/EfsdrAit33D41TbhA9uu.jpg" class="img-fluid">
                 </a>
               </div>
             </div>
-            <div class="col-6 col-md-2 pl-5 pr-5  mb-20">
+                        <div class="col-6 col-md-2 pl-5 pr-5 mb-20">
               <div class="brands-grid-item-group">
                 <a class="" href="#">
-                  <img src="images/sample-images/brands/itoh.jpg" class="img-fluid">
+                  <img src="http://henato.eglobalmd.com/storage/manufacturers/January2018/2PbRXFiAryF6qRNSs9Is.jpg" class="img-fluid">
                 </a>
               </div>
             </div>
-            <div class="col-6 col-md-2 pl-5 pr-5  mb-20">
+                        <div class="col-6 col-md-2 pl-5 pr-5 mb-20">
               <div class="brands-grid-item-group">
                 <a class="" href="#">
-                  <img src="images/sample-images/brands/kinohimitsu.jpg" class="img-fluid">
+                  <img src="http://henato.eglobalmd.com/storage/manufacturers/January2018/JoKGAsDMWpZruYXHZeSk.jpg" class="img-fluid">
                 </a>
               </div>
             </div>
-            <div class="col-6 col-md-2 pl-5 pr-5  mb-20">
+                        <div class="col-6 col-md-2 pl-5 pr-5 mb-20">
               <div class="brands-grid-item-group">
                 <a class="" href="#">
-                  <img src="images/sample-images/brands/omron.jpg" class="img-fluid">
+                  <img src="http://henato.eglobalmd.com/storage/manufacturers/January2018/XIxi7RTydP0LCJ6yJ71d.jpg" class="img-fluid">
                 </a>
               </div>
             </div>
-            <div class="col-6 col-md-2 pl-5 pr-5  mb-20">
+                        <div class="col-6 col-md-2 pl-5 pr-5 mb-20">
               <div class="brands-grid-item-group">
                 <a class="" href="#">
-                  <img src="images/sample-images/brands/swisse.jpg" class="img-fluid">
+                  <img src="http://henato.eglobalmd.com/storage/manufacturers/January2018/Pocl2S44dWoZa6bWifTY.jpg" class="img-fluid">
                 </a>
               </div>
             </div>
+             
+
+            
                                                                       
           </div>
       </div>
     </section>
 
+
+
+
+    </div>
     <footer>
       <div class="container">
         <div class="col text-center">
@@ -1087,6 +895,7 @@
       </div>
       
     </footer>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/jquery-3.2.1.min.js"></script>
