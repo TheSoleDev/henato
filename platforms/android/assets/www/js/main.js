@@ -1,3 +1,9 @@
+$(document).ready(function(){
+
+    $.mobile.loading().hide();
+
+});
+
 var init = {
  data_json: [],
   data : function(){
@@ -61,7 +67,12 @@ var init = {
         $('.sale-products-slide').slick({
           slidesToShow: 2,
           slidesToScroll: 1
-        });         
+        });  
+        $('.recommended-products-slide').slick({
+          slidesToShow: 2,
+          slidesToScroll: 1
+        });
+
         $('.featured-products-slide').slick({
           slidesToShow: 2,
           slidesToScroll: 1
