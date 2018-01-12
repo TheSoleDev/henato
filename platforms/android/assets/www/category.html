@@ -17,54 +17,25 @@
 
 
     <header>
-      <div class="container-fluid top-bar">
-        <div class="container">
-          <div class="row">
-            <div class="col-sm-6 text-left">
-              <ul class="inline-list">
-                  <li>
-                    <a href="#" class="main selected text-trasform-none">Jual</a>
-                  </li>
-                  <li class="divider">|</li>
-                  <li>
-                    <a href="#" class="main selected text-trasform-none">Download</a>
-                  </li>
-                  <li class="divider">|</li>
-                  <li>
-                    Ikut Kami&nbsp;&nbsp;&nbsp;<a href="#" class="main text-trasform-none"><i class="fa fa-facebook" aria-hidden="true"></i></a>&nbsp;&nbsp;&nbsp;<a href="#" class="main text-trasform-none"><i class="fa fa-instagram"></i></a>
-                  </li>
-              </ul>
-            </div>
-            <div class="col-sm-6 text-right">
-              <ul class="inline-list">
-                  <li><a href="#" class="main selected text-trasform-none"><i class="fa fa-question-circle"></i> Bantuan</a></li>
-                  <li class="divider">|</li>
-                  <li><a href="#" class="main selected text-trasform-none">Daftar</a></li>
-                  <li class="divider">|</li>
-                  <li><a href="#" class="main text-trasform-none">Login</a></li>
-              </ul>
-            </div>        
-          </div>
-        </div>
-      </div>
-      <div class="container-fluid header-bar">
+
+      <div class="container-fluid header-bar fixed-top">
         <div class="container">
           <div class="row flex-container">
-            <div class="col-xs-12 col text-left">
-              <img src="images/henato_logo_white.png">
-            </div>
-            <div class="col-xs-12 col-8 text-left">
-                <form id="search_option" action="http://henato-v1.local/shop" method="get">
+            <div class="col-9 pr-0 text-left">
+                <form id="search_option" action="http://henato.eglobalmd.com/search" method="get">
                   <div class="input-group header-search-box-group">
-                      <input type="text" id="srch_term" name="srch_term" class="form-control search-box-input" placeholder="Search for...">
+                      <input type="text" id="keyword" name="keyword" class="form-control search-box-input" placeholder="Search for...">
                       <span class="input-group-btn">
                         <button id="btn-search" class="btn btn-default  search-box-button" type="submit"><svg class="henato-svg-icon icon-search-2" height="19" viewBox="0 0 19 19" width="19"><g fill-rule="evenodd" stroke="none" stroke-width="1"><g transform="translate(-1016 -32)"><g><g transform="translate(405 21)"><g transform="translate(611 11)"><path d="m8 16c4.418278 0 8-3.581722 8-8s-3.581722-8-8-8-8 3.581722-8 8 3.581722 8 8 8zm0-2c-3.3137085 0-6-2.6862915-6-6s2.6862915-6 6-6 6 2.6862915 6 6-2.6862915 6-6 6z" fill="white"></path><path d="m12.2972351 13.7114222 4.9799555 4.919354c.3929077.3881263 1.0260608.3842503 1.4141871-.0086574.3881263-.3929076.3842503-1.0260607-.0086574-1.414187l-4.9799554-4.919354c-.3929077-.3881263-1.0260608-.3842503-1.4141871.0086573-.3881263.3929077-.3842503 1.0260608.0086573 1.4141871z" fill="white"></path></g></g></g></g></g></svg></button>
                       </span>
-                  </div><!-- /input-group -->
+                  </div>
                 </form>
             </div>  
-            <div class="col text-center">
-                <svg class="henato-svg-icon icon-shopping-cart-2 navbar__link-icon" viewBox="0 0 26.6 25.6"><polyline fill="none" points="2 1.7 5.5 1.7 9.6 18.3 21.2 18.3 24.6 6.1 7 6.1" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2.5"></polyline><circle cx="10.7" cy="23" r="2.2" stroke="none"></circle><circle cx="19.7" cy="23" r="2.2" stroke="none"></circle></svg>
+            <div class="col-3 pr-0 pl-0 text-center">
+                <a href="http://henato.eglobalmd.com/cart">
+                    <svg class="henato-svg-icon icon-shopping-cart-2 navbar__link-icon" viewBox="0 0 26.6 25.6"><polyline fill="none" points="2 1.7 5.5 1.7 9.6 18.3 21.2 18.3 24.6 6.1 7 6.1" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2.5"></polyline><circle cx="10.7" cy="23" r="2.2" stroke="none"></circle><circle cx="19.7" cy="23" r="2.2" stroke="none"></circle></svg>
+                    <div class="header-cart-counter" style="display: none;"></div>
+                </a>
             </div>                  
           </div>
         </div>
@@ -312,10 +283,12 @@
       </div>
       
     </footer>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="js/jquery-3.2.1.slim.min.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/vendor/bootstrap/bootstrap.min.js"></script>
+    <script src="js/vendor/slick/slick.min.js"></script>    
+    <script src="js/jquery.mobile-1.5.0-alpha.1.js"></script>    
+    <script src="js/config.js"></script>    
+    <script src="js/main.js"></script>
   </body>
 </html>
