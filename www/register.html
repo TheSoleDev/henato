@@ -7,9 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/vendor/bootstrap/bootstrap.min.css">
-    <link rel="stylesheet" href="css/vendor/slick/slick.css">
-    <link rel="stylesheet" href="css/vendor/slick/slick-theme.css">    
-    <link rel="stylesheet" href="css/vendor/fontawesome/font-awesome.min.css">    
+    <link rel="stylesheet" href="css/vendor/fontawesome/font-awesome.min.css">
     <link rel="stylesheet" href="css/global.css">    
     <link rel="stylesheet" href="css/main.css">    
 
@@ -56,110 +54,92 @@
           </div>
         </div>
       </div>
-    </header>
-    <div class="main-container">
-         
-        <section class="mt-100">
-        <div class="container">
+      <div class="sub-header-title">      
+        <div class="container-fluid">
+
             <div class="row">
-              <div class="col">
-                <div class="dynamic-carousel-container">
+              <div class="col-1 pr-0 title-text pt-5">
+                <a href="index.html" data-ajax="false"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
+              </div>
+              <div class="col pl-0 title-text">
+               <span class="dynamic-current-category">Back</span>
+              </div>
+            </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="main-container">
+        <div class="container">
+            <div class="row justify-content-md-center mt-100">
+
+                <div class="col mt-70">
+                    <div class="panel panel-login">
+                        <h3 class="panel-heading">USER REGISTER</h3>
+
+                        <div class="panel-body">
+                            <form class="form-horizontal" method="POST" action="#">
+                                <div class="form-group">
+                                  <label for="name" class="col control-label">Name</label>
+                                  <div class="col">
+                                    <input id="name" type="text" class="form-control" name="name" value="" required="" autofocus="">
+                                  </div>
+                                </div>
+
+                                <div class="form-group">
+                                  <label for="email" class="col control-label">E-Mail Address</label>
+                                  <div class="col">
+                                    <input id="email" type="email" class="form-control" name="email" value="" required="">
+                                  </div>
+                                </div>
+
+                                <div class="form-group">
+                                  <label for="password" class="col control-label">Password</label>
+                                  <div class="col">
+                                    <input id="password" type="password" class="form-control" name="password" required="">
+                                  </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="password-confirm" class="col control-label">Confirm Password</label>
+                                    <div class="col">
+                                      <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required="">
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-md-12 col-md-offset-4">
+                                        <button type="submit" class="btn btn-maroon mr-20">
+                                            Register
+                                        </button> | 
+                                         <a class="btn btn-link" href="http://henato-v2.local/login">
+                                            Existing User Login
+                                        </a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-              </div>
-               
-       
-                  
-            </div> 
+
+
+            </div>
         </div>
-      </section>
-      
-
-    <section id="categories" class="mt-30"> 
-      <div class="container">
-          <div class="row">      
-            <div class="col">
-              <h3 class="section-title">Categories</h3>
-            </div>
-          </div>  
-      </div>
-      <div class="brand-grid home-category-list  d-block d-sm-none">
-          <div class="grid-list-wrapper">
-              <div class="grid-list hide-scrollbar dynamic-category-container" style="height: 294px; padding: 0px;">
-                   
-              </div>
-          </div>
-      </div>
-
-    </section>
-     
-
-    <section id="recommended" class="mt-40"> 
-      <div class="container">
-          <div class="row">      
-            <div class="col">
-              <h3 class="section-title">Recommended Products</h3>
-            </div>
-          </div> 
-          <div class="row mt-20 pl-15 pr-15 recommended-products-slide dynamic-recommended_products-container">
-                                                                                                      
-          </div>           
-      </div>
-    </section>
-
-    <section id="featured" class="mt-40"> 
-      <div class="container">
-          <div class="row">      
-            <div class="col">
-              <h3 class="section-title">Featured Products</h3>
-            </div>
-          </div> 
-          <div class="row mt-20 pl-15 pr-15 featured-products-slide dynamic-featured_products-container">
-          </div>   
-      </div>
-    </section>
-
-    <section id="brands" class="mt-40"> 
-      <div class="container">
-          <div class="row">      
-            <div class="col">
-              <h3 class="section-title">Featured Brands</h3>
-            </div>
-          </div> 
-          <div class="row mt-20 pl-15 pr-15 featured-brands-slider dynamic-brands-container">
-          </div>   
-      </div>
-    </section>
-
-
-
-
     </div>
-    <footer>
-      <div class="container">
-        <div class="col text-center">
-          Copyright &copy; 2018 Henato. All rights reserved.
-        </div>
-      </div>
-      
-    </footer>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/vendor/bootstrap/bootstrap.min.js"></script>
     <script src="js/vendor/slick/slick.min.js"></script>    
     <script src="js/jquery.mobile-1.5.0-alpha.1.js"></script>    
-    <script src="js/jquery.touchSwipe.min.js"></script>            
     <script src="js/config.js"></script>    
-    <script src="js/main.js"></script>  
-    <script src="js/app/home.js"></script>            
-    
+    <script src="js/main.js"></script>
     <script type="text/javascript">
 
       $(document).ready(function(){
-            init.home();
-            $.mobile.loading().hide();
+           // init.category();
 
       });
     </script>

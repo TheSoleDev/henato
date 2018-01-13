@@ -2,7 +2,63 @@ $(document).ready(function(){
 
     $.mobile.loading().hide();
 
+    $('#frm-login').on('submit',function(e) {
+      e.preventDefault();
+
+      $.ajax({
+            url: api_root+"data/submit_login",
+            type: "POST",
+            dataType: "json",
+            data: $('#frm-login').serialize(),
+            success: function(data) {
+              console.log(data);
+               if(data.errors == ''){
+                 localStorage.setItem('user_profile',JSON.stringify(data));
+                 localStorage.setItem('is_logged',1);
+                 $('.register-header-container').hide();
+                 $('.login-header-container').hide();
+                 
+                 $('.welcome-header-container').html('Welcome! '+ data.data.name);
+                 $('.welcome-header-container').show();
+                 $('.logout-header-container').show();
+                 $('.logout-header-container').show();
+                 window.location ="index.html";
+                                
+               }
+               else{
+                alert( "Invalid username or password.");
+               }
+            },
+            error: function() {}
+        });
+
+    });
+      
+    if(localStorage.getItem('is_logged') == 1){
+       var user_profile = JSON.parse(localStorage.getItem('user_profile')); 
+       $('.register-header-container').hide();
+       $('.login-header-container').hide();
+       $('.welcome-header-container').html('Welcome! '+ user_profile.data.name);
+       $('.welcome-header-container').show();
+       $('.logout-header-container').show();
+       $('.logout-header-container').show();       
+    }
+
+
 });
+
+$(document).on("click",".lnk-logout",function(e){
+    e.preventDefault();
+       localStorage.removeItem('user_profile');
+       localStorage.removeItem('is_logged');     
+       $('.register-header-container').show();
+       $('.login-header-container').show();
+       $('.welcome-header-container').html('');
+       $('.welcome-header-container').hide();
+       $('.logout-header-container').hide();
+       $('.logout-header-container').hide(); 
+       window.location ="index.html";
+})  
 
 var init = {
  data_json: [],

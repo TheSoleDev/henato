@@ -23,9 +23,12 @@
           <div class="row">
             <div class="col text-right">
               <ul class="inline-list">
-                <li><a href="#" class="main selected text-trasform-none">Daftar</a></li>
-                <li class="divider">|</li>
-                <li><a href="#" class="main text-trasform-none">Login</a></li>
+                <li class="register-header-container"><a href="register.html" class="main selected text-trasform-none" data-ajax="false">Daftar</a></li>
+                <li class="divider register-header-container">|</li>
+                <li class="login-header-container"><a href="login.html" class="main text-trasform-none" data-ajax="false">Login</a></li>
+                <li class="welcome-header-container" style="display: none;"></li>
+                <li class="divider logout-header-container" style="display: none;">|</li>
+                <li class="logout-header-container" style="display: none;"><a href="#" class="main text-trasform-none lnk-logout" data-ajax="false">Logout</a></li>
               </ul>
             </div>        
           </div>
@@ -100,7 +103,7 @@
                                 <h6 class="title-attr"><small>QUANTITY</small></h6>                    
                                 <div class="mt-10">
                                     <div class="btn-minus"><span class="fa fa-minus"></span></div>
-                                    <input value="1" readonly="readonly" />
+                                    <input value="1" class="txt-qty" readonly="readonly" />
                                     <div class="btn-plus"><span class="fa fa-plus"></span></div>
                                 </div>
                             </div>                
@@ -202,7 +205,7 @@
                     <div class="row justify-content-md-center">
                         <div class="col">
 
-                            <form class="form-horizontal" method="POST" action="http://henato.eglobalmd.com/login">
+                            <form class="form-horizontal" method="POST" id="frm-login">
                                 <input type="hidden" name="_token" value="B1lLy4IWlsFgwKDXJKksEDoXCfIXY7IaGjvSjVcn">
 
                                 <div class="form-group">
@@ -242,10 +245,10 @@
                                         <button type="button" class="btn btn-secondary btn-block" data-dismiss="modal">Cancel</button>
                                     </div>
                                     <div class="col mt-10">
-                                        <a class="btn btn-link" href="http://henato.eglobalmd.com/password/reset">
+                                        <!-- <a class="btn btn-link" href="http://henato.eglobalmd.com/password/reset">
                                             Forgot Your Password?
                                         </a>
-                                        |
+                                        | -->
                                          <a class="btn btn-link" href="http://henato.eglobalmd.com/register">
                                             New User Registration
                                         </a>                                            
@@ -314,21 +317,21 @@
                     var now = $(".section > div > input").val();
                     if ($.isNumeric(now)){
                         if (parseInt(now) -1 > 0){ now--;}
-                        $(".section > div > input").val(now);
+                        $(".txt-qty").val(now);
                     }else{
-                        $(".section > div > input").val("1");
+                        $(".txt-qty").val("1");
                     }
 
-                    $('#quantity').val($(".section > div > input").val());
+                    $('#quantity').val($(".txt-qty").val());
                 })            
                 $(".btn-plus").on("click",function(){
-                    var now = $(".section > div > input").val();
+                    var now = $(".txt-qty").val();
                     if ($.isNumeric(now)){
-                        $(".section > div > input").val(parseInt(now)+1);
+                        $(".txt-qty").val(parseInt(now)+1);
                     }else{
-                        $(".section > div > input").val("1");
+                        $(".txt-qty").val("1");
                     }
-                    $('#quantity').val($(".section > div > input").val());
+                    $('#quantity').val($(".txt-qty").val());
                 })                        
             });
 
