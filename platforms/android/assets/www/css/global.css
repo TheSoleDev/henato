@@ -18,10 +18,24 @@
   src: local('Open Sans Bold'), local('OpenSans-Bold'), url(../fonts/Open_Sans/OpenSans-Bold.ttf) format('ttf');
 }
 
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('../fonts/glyphicons-halflings-regular.eot');
+  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'), url('../fonts/glyphicons-halflings-regular.woff') format('woff'), url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), url('../fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+
+.glyphicon{
+  font-family: 'Glyphicons Halfling' !important;  
+}
+
 .flex-container {
     display: -webkit-flex;
     display: flex;
     align-items: center;
+}
+
+.text-maroon{
+  color: #9e1f63 !important;
 }
 
 h3.section-title{
@@ -29,6 +43,29 @@ h3.section-title{
   font-size: 17px;
   color: #9e1f63;
   font-weight: 600;
+}
+
+a{
+  color: #333333;
+}
+
+a:hover{
+  color: #9e1f63;
+}
+
+.required-highlight{
+  border: dotted 1px #dc3545;
+}
+
+.btn-maroon{
+  background-color: #9e1f63;
+  border-color: #9e1f63;
+  color: #ffffff;
+}
+.btn-maroon:hover{
+  background-color: #b52270;
+  border-color: #b52270;
+  color: #ffffff;
 }
 
 

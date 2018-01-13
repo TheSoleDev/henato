@@ -115,6 +115,23 @@ body{
       position: relative;
   }
 
+  .sub-header-title{
+    background-color: #b52270;
+    color:#ffffff;
+  }
+  .sub-header-title .title-text{
+    background-color: #b52270;
+    color:#ffffff;
+    padding:10px 10px; 
+  }
+
+  .sub-header-title .title-text i{
+    font-size: 30px;
+  }  
+  .sub-header-title .title-text a{
+    color:#ffffff;
+  }
+
 /** [-]  SUB HEADER **/
 
 
@@ -545,6 +562,12 @@ body{
     border-color: rgba(0, 0, 0, .12);
     box-shadow: 0 0 1.3rem 0 rgba(0, 0, 0, .05);
   }    
+  .featured-brands-slider .slick-prev, .featured-brands-slider .slick-next{
+    font-size: 0;
+    line-height: 0;
+    position: absolute;
+    top: 35%;
+  }
 /** [-]  BRANDS STYLE **/
 
 
@@ -832,6 +855,10 @@ body{
 /** [-]  FOOTER STYLE **/
 
 
+.footer-toolbar{
+  background-color: #b52270;
+  padding: 5px;
+}
 
 
 .scrollable-container{
