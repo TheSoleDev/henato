@@ -41,8 +41,28 @@ $(document).ready(function(){
        $('.welcome-header-container').html('Welcome! '+ user_profile.data.name);
        $('.welcome-header-container').show();
        $('.logout-header-container').show();
-       $('.logout-header-container').show();       
+       $('.logout-header-container').show(); 
+
+      $.ajax({
+          url: api_root+"data/getCartDetails",
+          type: "POST",
+          dataType: "json",
+          data:"user_id="+user_profile.data.id,
+          success: function(data) {
+            $('.header-cart-counter').html(data.items_in_cart);
+
+            $('.header-cart-counter').html(data.items_in_cart);
+            if(data.items_in_cart > 0 ){
+              $('.header-cart-counter').show();
+            }
+            else{
+              $('.header-cart-counter').hide();
+            }         
+          },
+          error: function() {}
+      });             
     }
+
 
 
 });
@@ -319,12 +339,18 @@ var init = {
             $('.dynamic-product-name').html(data.product_details.product_name);
             $('.dynamic-product_short_description').html(data.product_details.product_short_description);
             $('.dynamic-product-details').html(data.product_details.product_full_description);
+            $('#product_id').val(data.product_details.id);
+            
+
+
 
             if(data.product_details.sale_type == 'Scheduled' || data.product_details.sale_type == 'Always'){
               $('.dynamic-product-price').html('<span class="regular-price  stroke ">'+data.product_details.regular_price+'</span> <span class="sale-price">'+data.product_details.sale_price+'</span>');
+              $('#price').val(data.product_details.regular_price);
             }
             else{
               $('.dynamic-product-price').html('<span class="regular-price">'+data.product_details.regular_price+'</span>');
+              $('#price').val(data.product_details.regular_price);
             }
 
             $('.dynamic-product-primary-image').attr('src',src_url+data.product_details.primary_img_path);
@@ -370,32 +396,60 @@ var init = {
             $('.dynamic-recommended-product').html(arr_str.join(''));
 
 
+            if(localStorage.getItem('is_logged') == 1){
+               var user_profile = JSON.parse(localStorage.getItem('user_profile')); 
+               $('#user_id').val(user_profile.data.id);
+            }
+
         }); 
 
 
   },
+  cart : function(){
+
+    if(localStorage.getItem('is_logged') == 1){
+       var user_profile = JSON.parse(localStorage.getItem('user_profile')); 
+
+        $.ajax({
+            url: api_root+"data/cart",
+            type: "GET",
+            dataType: "json",
+            data:"user_id="+user_profile.data.id,
+            success: function(data) {
+            console.log(data.data.cart_items);
+                var arr_str = [];
+                $.each(data.data.cart_items, function(index, value){
+
+                  var product_name = value.product_name;
+                  var product_limit_name =product_name.length > 60?product_name.substr(0,60) + '...':product_name;
+
+                  arr_str.push('<div class="row pb-10 pt-10" style="background-color: #ffffff;">');
+                      arr_str.push('<div class="col-3"><a class="" href="product.html?product_slug='+value.slug+'" data-ajax="false"><img src="'+src_url+value.primary_img_path+'" alt="..." class="img-fluid"></a></div>');
+                      arr_str.push('<div class="col-9">');
+                          arr_str.push('<h6 class="nomargin">'+product_limit_name+'</h6>');
+                          arr_str.push('<div class="row">');
+                              arr_str.push('<div class="col-6">');
+                                  arr_str.push('<div><span class="regular-price"><strong>$'+value.cart_price+'</strong></span> x '+value.quantity+'</div>');
+                              arr_str.push('</div>');
+                              arr_str.push('<div class="col-6 text-right">');
+                                arr_str.push('<button class="btn btn-danger btn-sm btnCartItemDelete" title="Delete" data-id="4"><i class="fa fa-trash-o"></i></button>');
+                              arr_str.push('</div>');
+                          arr_str.push('</div>');
+                      arr_str.push('</div>');
+                  arr_str.push('</div>');
+                  arr_str.push('<hr />');
+                });
+
+                $('.dynamic-cart-container').html(arr_str.join(''));
+            },
+            error: function() {}
+        }); 
+
+    }
+
+
+  },  
 } 
 
 init.data();
 
-
-            // arr_str.push('<div class="col-6 col-md-2 pl-5 pr-5">');
-            //     arr_str.push('<div class="product-grid-item-group">');
-            //       arr_str.push('<a class="" href="http://henato.eglobalmd.com/product/european-ladise-solid-pu-casual-satchel-shoulder-zipper-bag-dadatop">');
-            //         arr_str.push('<div class="product-img-container">');
-            //           arr_str.push('<img src="http://henato.eglobalmd.com/storage/products-items/January2018/Ug8nIUqH0VWdUR2zjMhL.jpg" class="img-fluid">');
-            //         arr_str.push('</div>');
-            //         arr_str.push('<div class="product-details-container">');
-            //           arr_str.push('<div class="product-title">European Ladise Solid PU Casual Satchel Shoulder Zipper Bag dadatop</div>');
-            //           arr_str.push('<div class="row mt-10">');
-            //             arr_str.push('<div class="col-8">');
-            //               arr_str.push('<div class="product-price"><span class="regular-price ">$20.75</span> </div>');
-            //             arr_str.push('</div>');
-            //             arr_str.push('<div class="col text-right">');
-            //               arr_str.push('<div class="free-shipping"><i class="fa fa-truck" aria-hidden="true"></i></div>');
-            //             arr_str.push('</div>');
-            //           arr_str.push('</div>');
-            //         arr_str.push('</div>');               
-            //       arr_str.push('</a>');
-            //     arr_str.push('</div>');
-            // arr_str.push('</div>');

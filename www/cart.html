@@ -62,69 +62,48 @@
                 <a href="index.html" data-ajax="false"><i class="fa fa-angle-left" aria-hidden="true"></i></a>
               </div>
               <div class="col pl-0 title-text">
-               <span class="dynamic-current-category">Back</span>
+               <span class="dynamic-current-category">My Cart (4)</span>
               </div>
             </div>
         </div>
       </div>
     </header>
 
-    <div class="main-container">
-        <div class="container">
-            <div class="row justify-content-md-center mt-100">
+    <div class="main-container pt-100">
+         
 
-                <div class="col mt-70">
-                    <div class="panel panel-login">
-                        <h3 class="panel-heading">USER REGISTER</h3>
+      <section class="mt-50 mb-100 shopping-cart-container" style="min-height: 450px;">
+            
+              <div class="container">
 
-                        <div class="panel-body">
-                            <form class="form-horizontal" method="POST" action="#">
-                                <div class="form-group">
-                                  <label for="name" class="col control-label">Name</label>
-                                  <div class="col">
-                                    <input id="name" type="text" class="form-control" name="name" value="" required="" autofocus="">
-                                  </div>
-                                </div>
+                  <div class="dynamic-cart-container">
+                  </div>
+ 
 
-                                <div class="form-group">
-                                  <label for="email" class="col control-label">E-Mail Address</label>
-                                  <div class="col">
-                                    <input id="email" type="email" class="form-control" name="email" value="" required="">
-                                  </div>
-                                </div>
+              </div>
+    
+      </section>
 
-                                <div class="form-group">
-                                  <label for="password" class="col control-label">Password</label>
-                                  <div class="col">
-                                    <input id="password" type="password" class="form-control" name="password" required="">
-                                  </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="password-confirm" class="col control-label">Confirm Password</label>
-                                    <div class="col">
-                                      <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required="">
-                                    </div>
-                                </div>
-
-                                <div class="form-group">
-                                    <div class="col-md-12 col-md-offset-4">
-                                        <button type="submit" class="btn btn-maroon mr-20">
-                                            Register
-                                        </button> | 
-                                         <a class="btn btn-link" href="http://henato-v2.local/login">
-                                            Existing User Login
-                                        </a>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-
+      <div class="fixed-bottom footer-cart-toolbar">
+        <div class="container-fluid">
+          <div class="row pt-15 pb-15">
+            <div class="col-6">
+              Estimated Total:
+            </div>
+            <div class="col-6 text-right">
+              <strong>$ 100.00</strong>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col text-center pl-0 pr-0">
+              <button type="button" class="btn btn-maroon btn-block  btn-addToCart-not-logged" data-toggle="modal" data-target="#modalLogin" data-redirectto=""><span style="margin-right:20px" class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> PROCEED TO CHECKOUT</button>
 
             </div>
+          </div>
         </div>
+        
+      </div>
+
     </div>
 
 
@@ -137,10 +116,8 @@
     <script src="js/config.js"></script>    
     <script src="js/main.js"></script>
     <script type="text/javascript">
-
       $(document).ready(function(){
-           // init.category();
-
+            init.cart();
       });
     </script>
 

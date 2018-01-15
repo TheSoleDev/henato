@@ -48,7 +48,7 @@
                 </form>
             </div>  
             <div class="col-3 pr-0 pl-0 text-center">
-                <a href="http://henato.eglobalmd.com/cart">
+                <a href="cart.html" data-ajax="false">
                     <svg class="henato-svg-icon icon-shopping-cart-2 navbar__link-icon" viewBox="0 0 26.6 25.6"><polyline fill="none" points="2 1.7 5.5 1.7 9.6 18.3 21.2 18.3 24.6 6.1 7 6.1" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2.5"></polyline><circle cx="10.7" cy="23" r="2.2" stroke="none"></circle><circle cx="19.7" cy="23" r="2.2" stroke="none"></circle></svg>
                     <div class="header-cart-counter" style="display: none;"></div>
                 </a>
@@ -70,6 +70,7 @@
         </div>
       </div>
     </header>
+    <form id="frm-addtocart" name="frm-addtocart" method="POST" enctype='multipart/form-data'>    
     <div class="main-container mb-90">
          
         <section class="mt-100 product-details-container" >
@@ -90,7 +91,7 @@
                 <div class="row">
                     <div class="col" style="border:0px solid gray">
 
-                        <form id="frm-addtocart" name="frm-addtocart" method="POST" enctype='multipart/form-data'>
+                        
                             <h3 class="text-maroon dynamic-product-name"></h3>    
                             <!-- <h5 style="color:#337ab7">Brand <a href="#">Samsung</a> · <small style="color:#337ab7">(5054 ventas)</small></h5> -->
                             <div class="section pt-15 pb-15">                    
@@ -109,13 +110,14 @@
                             </div>                
                 
                             <div class="section mt-15">
-                                <input type="hidden" name="product_id" id="product_id" value="9">
-                                <input type="hidden" name="price" id="price" value=" 5.50 ">
+                                <input type="hidden" name="product_id" id="product_id" value="">
+                                <input type="hidden" name="price" id="price" value="">
                                 <input type="hidden" name="quantity" id="quantity" value="1">
+                                <input type="hidden" name="user_id" id="user_id" value="">
                                 
                                                                 
                                                         </div>  
-                        </form>                                      
+                                                              
                     </div>                              
               </div>
               <div class="row mt-30">
@@ -189,6 +191,26 @@
               </div>
           </div>
         </section>
+
+
+
+    </div>
+
+    <div class="fixed-bottom footer-toolbar">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col text-center pl-0 pr-0">
+            <button type="button" class="btn btn-maroon btn-block  btn-addToCart-not-logged" data-toggle="modal" data-target="#modalLogin" data-redirectto=""><span style="margin-right:20px" class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> ADD TO CART</button>
+            <button type="submit" class="btn btn-maroon btn-block btn-addToCart mt-0"><span style="margin-right:20px" class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Add to cart</button>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+    </form>
+
+
+
 
         <!-- Modal -->
         <div class="modal fade" id="modalLogin" tabindex="-1" role="dialog" aria-labelledby="modalLoginLabel" aria-hidden="true">
@@ -265,19 +287,6 @@
           </div>
         </div>
 
-    </div>
-
-    <div class="fixed-bottom footer-toolbar">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col text-center pl-0 pr-0">
-            <button type="button" class="btn btn-maroon btn-block" data-toggle="modal" data-target="#modalLogin"><span style="margin-right:20px" class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> ADD TO CART</button>
-          </div>
-        </div>
-      </div>
-      
-    </div>
-  
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="js/jquery-3.2.1.min.js"></script>
@@ -289,11 +298,39 @@
     <script src="js/config.js"></script>    
     <script src="js/main.js"></script>  
     <script src="js/app/home.js"></script>            
-    
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>    
     <script type="text/javascript">
 
       $(document).ready(function(){
             init.product();
+
+            if(localStorage.getItem('is_logged') == 1){
+               var user_profile = JSON.parse(localStorage.getItem('user_profile')); 
+               $('.btn-addToCart-not-logged').hide();
+               $('.btn-addToCart').show();
+            }
+            else{
+               $('.btn-addToCart-not-logged').show();
+               $('.btn-addToCart').hide() 
+            }
+
+      });
+
+      $('#frm-addtocart').on('submit',function(e) {
+        e.preventDefault();
+        $.ajax({
+              url: "http://henato-v2.local/data/addtocart",
+              type: "POST",
+              dataType: "json",
+              data: $('#frm-addtocart').serialize(),
+              success: function(data) {
+                $('.header-cart-counter').html(data.items_in_cart);
+                $('.header-cart-counter').show();
+
+                swal("Added!", "Item has been added to your shopping cart.", "success");
+              },
+              error: function() {}
+          });
 
       });
 
