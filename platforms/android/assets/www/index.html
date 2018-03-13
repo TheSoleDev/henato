@@ -37,7 +37,10 @@
       <div class="container-fluid header-bar">
         <div class="container">
           <div class="row flex-container">
-            <div class="col-9 pr-0 text-left">
+            <div class="col-2 pr-0 pl-0 text-center">
+              <img src="images/logo-icon.png" style="height: 35px" />
+            </div>
+            <div class="col-8 pr-0 text-left">
                 <form id="search_option" action="http://henato.eglobalmd.com/search" method="get">
                   <div class="input-group header-search-box-group">
                       <input type="text" id="keyword" name="keyword" class="form-control search-box-input" placeholder="Search for...">
@@ -47,7 +50,7 @@
                   </div>
                 </form>
             </div>  
-            <div class="col-3 pr-0 pl-0 text-center">
+            <div class="col-2 pr-0 pl-0 text-center">
                 <a href="cart.html" data-ajax="false">
                     <svg class="henato-svg-icon icon-shopping-cart-2 navbar__link-icon" viewBox="0 0 26.6 25.6"><polyline fill="none" points="2 1.7 5.5 1.7 9.6 18.3 21.2 18.3 24.6 6.1 7 6.1" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="2.5"></polyline><circle cx="10.7" cy="23" r="2.2" stroke="none"></circle><circle cx="19.7" cy="23" r="2.2" stroke="none"></circle></svg>
                     <div class="header-cart-counter" style="display: none;"></div>
@@ -118,7 +121,7 @@
       </div>
     </section>
 
-    <section id="brands" class="mt-40"> 
+    <section id="brands" class="mt-40 mb-90"> 
       <div class="container">
           <div class="row">      
             <div class="col">
@@ -134,14 +137,65 @@
 
 
     </div>
-    <footer>
+    <div class="fixed-bottom footer-menubar">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col text-center pl-0 pr-0">
+            <div class="menubar-item">
+              <a href="index.html"  data-ajax="false"><i class="fa fa-home"></i></a>
+            </div>
+          </div>
+          <div class="col text-center pl-0 pr-0">
+            <div class="menubar-item">
+              <a href="#" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></a>
+            </div>
+          </div>
+          <div class="col text-center pl-0 pr-0">
+            <div class="menubar-item">
+              <a href="cart.html" data-ajax="false"><i class="fa fa-shopping-cart"></i></a>
+            </div>
+          </div>
+          <div class="col text-center pl-0 pr-0 logged-admin" style="display: none;">
+            <div class="menubar-item">
+              <a href="admin-dashboard.html" data-ajax="false"><i class="fa fa-address-book"></i></a>
+            </div>
+          </div>          
+          <div class="col text-center pl-0 pr-0">
+            <div class="menubar-item not-logged">
+              <a href="login.html" data-ajax="false"><i class="fa fa-user"></i></a>
+            </div>
+            <div class="menubar-item logged" style="display: none;">
+              <a href="#" class="lnk-logout" data-ajax="false"><i class="fa fa-sign-out"></i></a>
+            </div>            
+          </div>                              
+
+        </div>
+      </div>
+      
+    </div>   
+
+
+  <nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+    <div class="collapse navbar-collapse bg-inverse" id="navbarCollapse">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+              <a href="login.html" class="nav-link text-maroon text-bold logged" data-ajax="false">Jual</a>
+              <a href="seller-dashboard.html" class="nav-link text-maroon text-bold not-logged" data-ajax="false">Jual</a>
+          </li>
+          <li class="not-logged"><a href="register.html" class="nav-link text-maroon text-bold">Daftar</a></li>
+          <li class="not-logged"><a href="login.html" class="nav-link text-maroon text-bold">Login</a></li>
+          <li class="logged"><a href="#" class="main text-trasform-none lnk-logout" data-ajax="false">Logout</a></li>
+        </ul>
+      </div>
+  </nav>
+    <!-- <footer>
       <div class="container">
         <div class="col text-center">
           Copyright &copy; 2018 Henato. All rights reserved.
         </div>
       </div>
       
-    </footer>
+    </footer> -->
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

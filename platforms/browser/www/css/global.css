@@ -34,6 +34,10 @@
     align-items: center;
 }
 
+.text-bold{
+  font-weight: bold !important;
+}
+
 .text-maroon{
   color: #9e1f63 !important;
 }
@@ -73,6 +77,16 @@ a:hover{
 }
 .text-20{
   font-size: 20px !important;
+}
+
+.text-30{
+  font-size: 30px !important;
+}
+.text-40{
+  font-size: 40px !important;
+}
+.text-50{
+  font-size: 50px !important;
 }
 
 .required-highlight{

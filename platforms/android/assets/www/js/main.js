@@ -22,6 +22,16 @@ $(document).ready(function(){
                  $('.welcome-header-container').show();
                  $('.logout-header-container').show();
                  $('.logout-header-container').show();
+                 $('.logged').show();
+                 $('.not-logged').hide();      
+
+                 if(data.data.role_id == '1'){
+                  $('.logged-admin').show();
+                 }
+                 else{
+                  $('.logged-admin').hide();
+                 }
+
                  window.location ="index.html";
                                 
                }
@@ -34,6 +44,8 @@ $(document).ready(function(){
 
     });
       
+
+      console.log(localStorage.getItem('user_profile'));
     if(localStorage.getItem('is_logged') == 1){
        var user_profile = JSON.parse(localStorage.getItem('user_profile')); 
        $('.register-header-container').hide();
@@ -42,6 +54,15 @@ $(document).ready(function(){
        $('.welcome-header-container').show();
        $('.logout-header-container').show();
        $('.logout-header-container').show(); 
+       $('.logged').show();
+       $('.not-logged').hide();
+
+       if(user_profile.data.role_id == '1'){
+        $('.logged-admin').show();
+       }
+       else{
+        $('.logged-admin').hide();
+       }       
 
       $.ajax({
           url: api_root+"data/getCartDetails",
@@ -61,6 +82,10 @@ $(document).ready(function(){
           },
           error: function() {}
       });             
+    }
+    else{
+       $('.logged').hide();
+       $('.not-logged').show();      
     }
 
 
@@ -126,11 +151,8 @@ var init = {
                         arr_str.push('<div class="product-details-container">');
                           arr_str.push('<div class="product-title">'+product_limit_name+'</div>');
                           arr_str.push('<div class="row mt-10">');
-                            arr_str.push('<div class="col-8">');
+                            arr_str.push('<div class="col">');
                               arr_str.push('<div class="product-price"><span class="regular-price ">'+value.regular_price+'</span> </div>');
-                            arr_str.push('</div>');
-                            arr_str.push('<div class="col text-right">');
-                              arr_str.push('<div class="free-shipping"><i class="fa fa-truck" aria-hidden="true"></i></div>');
                             arr_str.push('</div>');
                           arr_str.push('</div>');
                         arr_str.push('</div>');                    

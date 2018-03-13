@@ -857,6 +857,35 @@ body{
   }
 /** [-]  CHECKOUT PAGE  STYLE **/
 
+@media (max-width: 768px) {
+    .navbar-collapse {
+        position: absolute;
+        top: 85px;
+        left: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 15px;
+        padding-top: 15px;
+        width: 100%;
+    }
+    .navbar-collapse.collapsing {
+        height: auto;
+        -webkit-transition: left 0.3s ease;
+        -o-transition: left 0.3s ease;
+        -moz-transition: left 0.3s ease;
+        transition: left 0.3s ease;
+        left: -100%;
+    }
+    .navbar-collapse.show {
+        background-color: #ffffff;
+        left: 0;
+        -webkit-transition: left 0.3s ease-in;
+        -o-transition: left 0.3s ease-in;
+        -moz-transition: left 0.3s ease-in;
+        transition: left 0.3s ease-in;
+    }
+}
+
 
 
 /** [+]  FOOTER STYLE **/
@@ -867,6 +896,16 @@ body{
     color: #ffffff;
   }
 /** [-]  FOOTER STYLE **/
+
+.footer-menubar{
+  background-color: #b52270;
+  padding: 10px 5px;
+}
+
+.footer-menubar a i{
+  color: #ffffff;
+  font-size: 24px;
+}
 
 
 .footer-toolbar{
