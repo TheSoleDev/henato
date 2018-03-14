@@ -69,7 +69,7 @@
       </div>
     </header>
 
-    <form id="frm-supplier" name="frm-supplier" method="POST" enctype='multipart/form-data'>
+    <form id="frm-supplier-edit" name="frm-supplier-edit" method="POST" enctype='multipart/form-data'>
       <div class="main-container pt-100">
            
 
@@ -77,7 +77,10 @@
               
                 <div class="container">
                   
-                  
+                    <div class="form-group">
+                      <label for="supplier_code">Supplier Code</label>
+                      <input type="text" class="form-control" id="supplier_code" name="supplier_code" required="required">
+                    </div>
                     <div class="form-group">
                       <label for="supplier_name">Supplier Name</label>
                       <input type="text" class="form-control" id="supplier_name" name="supplier_name" required="required">
@@ -98,7 +101,7 @@
                       <label for="address">Address</label>
                       <textarea class="form-control" id="address" name="address" rows="3" required="required"></textarea>
                     </div>
-
+                    <input type="hidden" class="form-control" id="id" name="id">
                   
    
 
@@ -110,7 +113,7 @@
           <div class="container-fluid">
             <div class="row">
               <div class="col text-center pl-0 pr-0">
-                <button type="submit" class="btn btn-maroon btn-block"><span style="margin-right:20px" class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Submit</button>
+                <button type="submit" class="btn btn-maroon btn-block"><span style="margin-right:20px" class="glyphicon glyphicon-shopping-cart" aria-hidden="true"></span> Update</button>
 
               </div>
             </div>
@@ -132,7 +135,7 @@
     <script src="js/main.js"></script>
     <script type="text/javascript">
       $(document).ready(function(){
-            init.admin_supplier();
+            init.admin_supplier_edit();
       });
     </script>
 

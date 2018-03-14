@@ -1,3 +1,11 @@
+
+$(document).on('click', '.link-editSupplier', function(e){
+    e.preventDefault();
+    localStorage.setItem('edit_supplier_id',$(this).data('id'));
+    console.log(localStorage.getItem('edit_supplier_id'));        
+    window.location ="admin-suppliers-form-edit.html";
+});  
+
 $(document).ready(function(){
 
     $.mobile.loading().hide();
@@ -45,7 +53,6 @@ $(document).ready(function(){
     });
 
     $('#frm-supplier').on('submit',function(e) {
-       
         e.preventDefault();
         console.log($('#frm-supplier').serialize());
 
@@ -62,13 +69,41 @@ $(document).ready(function(){
                                   
                  }
                  else{
+                  alert( "Error in updating. Please try again.");
+                 }
+              },
+              error: function() {}
+        });
+
+    });   
+ 
+    $('#frm-supplier-edit').on('submit',function(e) {
+        e.preventDefault();
+        console.log($('#frm-supplier-edit').serialize());
+
+        $.ajax({
+              url: api_root+"data/submit_admin_edit_supplier",
+              type: "POST",
+              dataType: "json",
+              data: $('#frm-supplier-edit').serialize(),
+              success: function(data) {
+                console.log(data);
+                 if(data.errors == ''){
+
+                   window.location ="admin-suppliers.html";
+                                  
+                 }
+                 else{
                   alert( "Error in saving. Please try again.");
                  }
               },
               error: function() {}
         });
 
-    });      
+    }); 
+
+
+
 
     //console.log(localStorage.getItem('user_profile'));
     if(localStorage.getItem('is_logged') == 1){
@@ -520,7 +555,7 @@ var init = {
             $.each(arr_supplier, function(index, value){
 
               arr_str.push('<tr>');
-                arr_str.push('<th scope="row">'+value.supplier_code+'</th>');
+                arr_str.push('<th scope="row"><a href="#" class="text-maroon link-editSupplier" data-id="'+value.id+'"  data-ajax="false">'+value.supplier_code+'</a></th>');
                 arr_str.push('<td>'+value.supplier_name+'</td>');
                 arr_str.push('<td>'+value.country+'</td>');
               arr_str.push('</tr>');
@@ -541,7 +576,39 @@ var init = {
     }
 
 
-  },    
+  }, 
+  admin_supplier_edit : function(){
+
+    if(localStorage.getItem('is_logged') == 1){
+        var user_profile = JSON.parse(localStorage.getItem('user_profile')); 
+        var init_data = JSON.parse(localStorage.getItem('init_data'));
+        var edit_supplier_id = JSON.parse(localStorage.getItem('edit_supplier_id'));  
+
+        if(edit_supplier_id != ''){
+          $.ajax({
+                url: api_root+"data/admin_edit_supplier/" + edit_supplier_id,
+                type: "POST",
+                dataType: "json",
+                success: function(data) {
+                  console.log(data);
+                  $('#supplier_code').val(data.data.supplier_code);
+                  $('#supplier_name').val(data.data.supplier_name);
+                  $('#country').val(data.data.country);
+                  $('#emaill_address').val(data.data.emaill_address);
+                  $('#contact_no').val(data.data.contact_no);
+                  $('#address').val(data.data.address);
+                  $('#id').val(data.data.id);
+                },
+                error: function() {}
+          });
+        }
+
+    }
+
+
+  }, 
+
+
 } 
 
 init.data();
