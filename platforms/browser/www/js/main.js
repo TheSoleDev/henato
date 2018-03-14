@@ -529,6 +529,55 @@ var init = {
 
 
   },  
+  admin_product : function(){
+
+    if(localStorage.getItem('is_logged') == 1){
+        var user_profile = JSON.parse(localStorage.getItem('user_profile')); 
+        var init_data = JSON.parse(localStorage.getItem('init_data'));  
+
+        var arr_admin_product = init_data.data['admin_products'];
+        var arr_str = [];
+
+        if(arr_admin_product.length > 0){
+
+
+          arr_str.push('<table class="table">');
+            arr_str.push('<thead class="thead-light">');
+              arr_str.push('<tr>');
+                arr_str.push('<th scope="col"></th>');
+                arr_str.push('<th scope="col">SKU</th>');
+                arr_str.push('<th scope="col">Product Name</th>');
+                
+              arr_str.push('</tr>');
+            arr_str.push('</thead>');
+            arr_str.push('<tbody>');
+
+
+            $.each(arr_admin_product, function(index, value){
+
+              arr_str.push('<tr>');
+                arr_str.push('<td><a href="#" class="text-maroon link-editProduct" data-id="'+value.id+'"  data-ajax="false"><img src="'+src_url+value.primary_img_path+'" width="70"></a></td>');                
+                arr_str.push('<th scope="row"><a href="#" class="text-maroon link-editProduct" data-id="'+value.id+'"  data-ajax="false">'+value.sku+'</a></th>');
+                arr_str.push('<td>'+value.product_name+'</td>');
+              arr_str.push('</tr>');
+
+            });
+
+            arr_str.push('</tbody>');
+          arr_str.push('</table>');
+
+
+        } 
+        else{
+            arr_str.push('<div class="text-center">No product found.</div>'); 
+        }
+
+        $('.dynamic-product-container').html(arr_str.join(''));
+
+    }
+
+
+  }, 
   admin_supplier : function(){
 
     if(localStorage.getItem('is_logged') == 1){
