@@ -43,9 +43,34 @@ $(document).ready(function(){
         });
 
     });
-      
 
-      console.log(localStorage.getItem('user_profile'));
+    $('#frm-supplier').on('submit',function(e) {
+       
+        e.preventDefault();
+        console.log($('#frm-supplier').serialize());
+
+        $.ajax({
+              url: api_root+"data/submit_admin_add_supplier",
+              type: "POST",
+              dataType: "json",
+              data: $('#frm-supplier').serialize(),
+              success: function(data) {
+                console.log(data);
+                 if(data.errors == ''){
+
+                   window.location ="admin-suppliers.html";
+                                  
+                 }
+                 else{
+                  alert( "Error in saving. Please try again.");
+                 }
+              },
+              error: function() {}
+        });
+
+    });      
+
+    //console.log(localStorage.getItem('user_profile'));
     if(localStorage.getItem('is_logged') == 1){
        var user_profile = JSON.parse(localStorage.getItem('user_profile')); 
        $('.register-header-container').hide();
@@ -129,8 +154,6 @@ var init = {
         });    
 
         $('.dynamic-category-container').html(arr_str_category.join(''));
-
-
 
         var arr_section = ['todays_sale','recommended_products','featured_products','latest_products','popular_products']
 
@@ -471,6 +494,54 @@ var init = {
 
 
   },  
+  admin_supplier : function(){
+
+    if(localStorage.getItem('is_logged') == 1){
+        var user_profile = JSON.parse(localStorage.getItem('user_profile')); 
+        var init_data = JSON.parse(localStorage.getItem('init_data'));  
+
+        var arr_supplier = init_data.data['suppliers'];
+        var arr_str = [];
+
+        if(arr_supplier.length > 0){
+
+
+          arr_str.push('<table class="table">');
+            arr_str.push('<thead class="thead-light">');
+              arr_str.push('<tr>');
+                arr_str.push('<th scope="col">Code</th>');
+                arr_str.push('<th scope="col">Supplier Name</th>');
+                arr_str.push('<th scope="col">Country</th>');
+              arr_str.push('</tr>');
+            arr_str.push('</thead>');
+            arr_str.push('<tbody>');
+
+
+            $.each(arr_supplier, function(index, value){
+
+              arr_str.push('<tr>');
+                arr_str.push('<th scope="row">'+value.supplier_code+'</th>');
+                arr_str.push('<td>'+value.supplier_name+'</td>');
+                arr_str.push('<td>'+value.country+'</td>');
+              arr_str.push('</tr>');
+
+            });
+
+            arr_str.push('</tbody>');
+          arr_str.push('</table>');
+
+
+        } 
+        else{
+            arr_str.push('<div class="text-center">No supplier found.</div>'); 
+        }
+
+        $('.dynamic-supplier-container').html(arr_str.join(''));
+
+    }
+
+
+  },    
 } 
 
 init.data();
